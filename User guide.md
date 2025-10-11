@@ -1,8 +1,8 @@
 # 📘 **User Guide – LabReq Power App**  
 **Version:** 1.0  
-**Date:** 2025-10-11  
+**Date:** 2024-12-1  
 **Author:** Emmanuel E. Imoriafe  
-**Repository:** `https://github.com/<org>/labreq-powerapp`  
+**Repository:** [https://github.com/eimoriafe/LabREQ]  
 
 ---
 
