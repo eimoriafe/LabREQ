@@ -1,0 +1,155 @@
+# 📘 **User Guide – LabReq Power App**  
+**Version:** 1.0  
+**Date:** 2025-10-11  
+**Author:** Emmanuel E. Imoriafe  
+**Repository:** `https://github.com/<org>/labreq-powerapp`  
+
+---
+
+## 1. Introduction  
+
+The **LabReq Power App** is a digital system hosted on **Microsoft Azure**, designed to streamline the laboratory specimen request workflow for medical assessments. It replaces manual, paper-based processes with an automated, role-based digital workflow.  
+
+This guide explains how to access, use, and troubleshoot the LabReq system.  
+
+**Target Users:**  
+- **Doctors:** Initiate laboratory specimen requests.  
+- **Finance Team:** Verify payment before approval.  
+- **Specimen Collection Team:** Perform collection upon authorization.  
+- **Program Managers:** Monitor activity and performance metrics.  
+
+---
+
+## 2. Access and Login  
+
+**Platform:** Microsoft Power Apps (Web or Mobile).  
+
+1. Visit the corporate Power Apps portal:  
+   👉 [https://make.powerapps.com](https://make.powerapps.com)  
+2. Sign in using your **Microsoft Azure AD credentials**.  
+3. Locate the app titled **“LabReq – Specimen Request”**.  
+4. Click **Launch App**.  
+
+> 🔒 **Note:** Only authenticated **Azure AD users** with assigned RBAC roles can access the app. Unauthorized users will be denied access.
+
+---
+
+## 3. Navigation Overview  
+
+### **Home Screen**  
+- Displays dashboard of pending and submitted requests.  
+- “New Request” button to create a new specimen collection form.  
+
+### **Request Form Fields:**  
+| Field | Description | Required |
+|--------|-------------|-----------|
+| Applicant ID | Unique identifier for each applicant | ✅ |
+| Applicant Name | Full name of applicant | ✅ |
+| Request Type | Select from dropdown list of test types | ✅ |
+| Notes | Optional additional information | ❌ |
+
+### **Menu Sections:**  
+- **Dashboard:** Summary view of all requests by status.  
+- **My Requests:** History of all submissions by the current doctor.  
+- **Finance Queue:** Accessible by Finance Team for verification.  
+- **Specimen Tasks:** For Specimen Team to view authorized tasks.  
+
+---
+
+## 4. Performing Common Tasks  
+
+### **A. Submitting a New Lab Request (Doctor Role)**  
+1. Open *LabReq Power App*.  
+2. Click **“New Request”**.  
+3. Fill in applicant details and test type.  
+4. Click **Submit**.  
+5. The request will automatically route to the **Finance Team** for verification.  
+
+### **B. Verifying Payment (Finance Role)**  
+1. Navigate to **Finance Queue**.  
+2. Review payment information.  
+3. Mark request as **Verified** or **Declined**.  
+4. Verified requests automatically trigger email to **Specimen Collection Team**.  
+
+### **C. Specimen Collection (Specimen Team Role)**  
+1. Open **Specimen Tasks** tab.  
+2. View list of authorized collections.  
+3. Perform collection and update status as **Completed**.  
+4. System will send confirmation emails to all stakeholders.  
+
+### **D. Monitoring Requests (Program Manager Role)**  
+1. Access **Dashboard**.  
+2. Filter by date, requester, or status.  
+3. Export data if necessary for reporting.  
+
+---
+
+## 5. Data Entry Standards  
+
+- All applicant details must match official ID documents.  
+- No special characters allowed in “Applicant ID” field.  
+- Test types should be selected from approved list only.  
+
+---
+
+## 6. Notifications & Reports  
+
+- **Automated Notifications:** Triggered via Power Automate Flow.  
+  - Finance notified upon new request.  
+  - Specimen Team notified upon payment verification.  
+  - Doctors and Program Managers notified after collection completion.  
+
+- **Reports:**  
+  - Weekly summary of pending and completed requests.  
+  - Downloadable CSV via Power BI dashboard integration.  
+
+---
+
+## 7. Troubleshooting  
+
+| Issue | Possible Cause | Resolution |
+|--------|----------------|-------------|
+| App not loading | Azure AD session expired | Log out and log in again |
+| Cannot submit request | Missing required field | Check for red-highlighted fields |
+| Finance team not receiving email | Power Automate flow failed | Notify IT Helpdesk |
+| Specimen task missing | Payment not verified | Confirm with Finance role |
+
+---
+
+## 8. FAQs  
+
+**Q1:** Can I edit a submitted request?  
+> Only before Finance verification. After that, contact Admin.  
+
+**Q2:** Can I access from mobile?  
+> Yes, via Power Apps mobile app (iOS/Android).  
+
+**Q3:** Is data backed up automatically?  
+> Yes, through SharePoint Online version history and Azure snapshots.  
+
+---
+
+## 9. Glossary  
+
+| Term | Definition |
+|------|-------------|
+| **RBAC** | Role-Based Access Control |
+| **Power Automate** | Microsoft workflow automation tool |
+| **Dataverse** | Microsoft data platform for Power Apps |
+| **Azure AD** | Microsoft Azure Active Directory |
+
+---
+
+## 📞 Support  
+
+For technical or access-related issues, contact:  
+**IT Helpdesk:** `helpdesk@organization.com`  
+**System Owner:** Emmanuel E. Imoriafe  
+
+---
+
+## ✅ Document Control  
+
+| Version | Date | Description | Author |
+|----------|------|-------------|--------|
+| 1.0 | 2025-10-11 | Initial User Guide for LabReq Power App | Emmanuel E. Imoriafe |
