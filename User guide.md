@@ -47,6 +47,7 @@ This guide explains how to access, use, and troubleshoot the LabReq system.
 | Applicant Name | Full name of applicant | ✅ |
 | Request Type | Select from dropdown list of test types | ✅ |
 | Notes | Optional additional information | ❌ |
+# N.B Other mandatory classified fields not included here
 
 ### **Menu Sections:**  
 - **Dashboard:** Summary view of all requests by status.  
@@ -143,7 +144,7 @@ This guide explains how to access, use, and troubleshoot the LabReq system.
 ## 📞 Support  
 
 For technical or access-related issues, contact:  
-**IT Helpdesk:** `helpdesk@organization.com`  
+**IT Helpdesk:** via designated support mail.  
 **System Owner:** Emmanuel E. Imoriafe  
 
 ---
@@ -152,4 +153,4 @@ For technical or access-related issues, contact:
 
 | Version | Date | Description | Author |
 |----------|------|-------------|--------|
-| 1.0 | 2025-10-11 | Initial User Guide for LabReq Power App | Emmanuel E. Imoriafe |
+| 1.0 | 2024-12-01 | Initial User Guide for LabReq Power App | Emmanuel E. Imoriafe |
