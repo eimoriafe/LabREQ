@@ -1,0 +1,178 @@
+- RecordsLagos:
+    Control: Screen
+    Variant: headerTableLayout_ver1.0
+    Children:
+    - Arrow1:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: =Navigate(Welcome_ReqForm2_SubOffice4ViewRecords, ScreenTransition.Fade)
+          Fill: =App.Theme.Colors.Lighter80
+          X: =855
+          Y: =25
+    - ScreenContainer1_1:
+        Control: GroupContainer
+        Variant: verticalAutoLayoutContainer
+        Properties:
+          Fill: =RGBA(245, 245, 245, 1)
+          Height: =Parent.Height
+          LayoutAlignItems: =LayoutAlignItems.Stretch
+          LayoutDirection: =LayoutDirection.Vertical
+          LayoutGap: =16
+          LayoutMode: =LayoutMode.Auto
+          PaddingBottom: =16
+          PaddingLeft: =16
+          PaddingRight: =16
+          PaddingTop: =16
+          Width: =Parent.Width
+        Children:
+        - HeaderContainer1_1:
+            Control: GroupContainer
+            Variant: horizontalAutoLayoutContainer
+            Properties:
+              FillPortions: =0
+              Height: =75
+              LayoutMode: =LayoutMode.Auto
+              RadiusBottomLeft: =8
+              RadiusBottomRight: =8
+              RadiusTopLeft: =8
+              RadiusTopRight: =8
+            Children:
+            - Header1_1:
+                Control: Header
+                Properties:
+                  Title: ="Lagos"
+        - MainContainer2_1:
+            Control: GroupContainer
+            Variant: horizontalAutoLayoutContainer
+            Properties:
+              LayoutAlignItems: =LayoutAlignItems.Stretch
+              LayoutMode: =LayoutMode.Auto
+              LayoutWrap: =true
+              RadiusBottomLeft: =8
+              RadiusBottomRight: =8
+              RadiusTopLeft: =8
+              RadiusTopRight: =8
+              Width: =1000
+            Children:
+            - Table2_1:
+                Control: Table
+                Variant: pcfdataset
+                Properties:
+                  EnableMultipleSelection: ='PowerAppsOneGrid.EnableMultipleSelection'.Enable
+                  Items: =NGLag_AddLabTest_BackendDb
+                  ReflowBehavior: ='PowerAppsOneGrid.ReflowBehavior'.Reflow
+                  FillPortions: =1
+                Children:
+                - mimosa_id2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="mimosa_id"
+                      FieldName: ="field_4"
+                      FieldType: ="s"
+                      Order: =2
+                - FirstName2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="FirstName"
+                      FieldName: ="FirstName"
+                      FieldType: ="s"
+                      Order: =3
+                - dest_country2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="dest_country"
+                      FieldName: ="field_5"
+                      FieldType: ="s"
+                      Order: =23
+                - Approvl_labDb_stt2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="Approvl_labDb_stt"
+                      FieldName: ="Approvl_labDb_stt"
+                      FieldType: ="E"
+                      Order: =22
+                - add_Test5_Name2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="add_Test5_Name"
+                      FieldName: ="field_10"
+                      FieldType: ="s"
+                      Order: =16
+                - SurName1:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="SurName"
+                      FieldName: ="SurName"
+                      FieldType: ="s"
+                      Order: =4
+                - reqDoctor2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="reqDoctor"
+                      FieldName: ="field_19"
+                      FieldType: ="s"
+                      Order: =12
+                - TotalNairaAmount2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="TotalNairaAmount"
+                      FieldName: ="field_18"
+                      FieldType: ="n"
+                      Order: =11
+                - TotalUSDAmount2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="TotalUSDAmount"
+                      FieldName: ="field_17"
+                      FieldType: ="n"
+                      Order: =10
+                - DateofReqLagDB1:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="DateofReqLagDB"
+                      FieldName: ="field_14"
+                      FieldType: ="s"
+                      Order: =9
+                - Applica_dob2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="Applica_dob"
+                      FieldName: ="field_3"
+                      FieldType: ="s"
+                      Order: =7
+                - Applicant_Gender2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="Applicant_Gender"
+                      FieldName: ="field_2"
+                      FieldType: ="s"
+                      Order: =6
+                - timeofEntry2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="timeofEntry"
+                      FieldName: ="field_1"
+                      FieldType: ="s"
+                      Order: =5
+                - InvoiceRef_ID2:
+                    Control: PowerAppsOneGridTemplate_dataField
+                    Variant: textualColumn
+                    Properties:
+                      FieldDisplayName: ="InvoiceRef_ID"
+                      FieldName: ="field_0"
+                      FieldType: ="s"
+                      Order: =1

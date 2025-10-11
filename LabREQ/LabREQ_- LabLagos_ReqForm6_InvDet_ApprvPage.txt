@@ -1,0 +1,781 @@
+- LabLagos_ReqForm6_InvDet_ApprvPage:
+    Control: Screen
+    Properties:
+      Fill: =
+    Children:
+    - LabelLagRqFm4_FrstName:
+        Control: Label
+        Properties:
+          Text: ="First name"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =112.45
+          X: =107
+          Y: =301
+    - LabelLagRqFm4_Surname:
+        Control: Label
+        Properties:
+          Text: ="Surname"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =112.45
+          X: =107
+          Y: =263
+    - Label_Test1_Value_110:
+        Control: Label
+        Properties:
+          Text: =DataCardValue73.Text
+          FontWeight: =FontWeight.Bold
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =215
+          X: =256
+          Y: =299
+    - Label_Test1_Value_109:
+        Control: Label
+        Properties:
+          Text: =DataCardValue74.Text
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =200
+          X: =256
+          Y: =265
+    - LabelLagos_Reqfm6ClntMadePayment:
+        Control: Label
+        Properties:
+          Text: =If(LabelTotalUSDCost_5.Text = ".00","Doctor confirmed that this is a no fee request.","")
+          Font: =Font.Arial
+          Height: =37
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =288
+          X: =625
+          Y: =282
+    - Label1_5DateOfRq_20:
+        Control: Label
+        Properties:
+          Text: =DataCardValue40.Text
+          FontWeight: =FontWeight.Bold
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =105
+          X: =738
+          Y: =95
+    - Label1_5DateOfRq_19:
+        Control: Label
+        Properties:
+          Text: ="Mission rate:"
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =105
+          X: =625
+          Y: =95
+    - TextCanvas1_5:
+        Control: Text
+        Properties:
+          FontColor: =RGBA(255, 255, 255, 1)
+          Size: =26.24
+          Text: ="LabREQ"&Char(174)
+          Weight: ='TextCanvas.Weight'.Bold
+          Height: =57
+          Width: =121.44
+          X: =453.53
+          Y: =4
+    - AppGend_9:
+        Control: Label
+        Properties:
+          Text: ="Lagos"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =107.95
+          Y: =73
+    - Label_Test1_Value_99:
+        Control: Label
+        Properties:
+          Text: =DataCardValue34.Text
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =74.21
+          X: =339.58
+          Y: =690
+    - Label_Test1_Value_98:
+        Control: Label
+        Properties:
+          Text: =DataCardValue33.Text
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =81.71
+          X: =832.09
+          Y: =690
+    - Label_Test1_Value_97:
+        Control: Label
+        Properties:
+          Text: =DataCardValue30.Text
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =99.70
+          X: =723.40
+          Y: =690
+    - Label_Test1_Value_96:
+        Control: Label
+        Properties:
+          Text: =DataCardValue29.Text
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =103.45
+          X: =229.39
+          Y: =690
+    - Label1_5DateOfRq_11:
+        Control: Label
+        Properties:
+          Text: =If(DataCardValue3.Selected.Value = "Specimen collected", "Specimen collected on:",If(DataCardValue3.Selected.Value = "Specimen not collected","Specimen not collected:"," "))
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =128.94
+          X: =585.46
+          Y: =690
+    - Label1_5DateOfRq_10:
+        Control: Label
+        Properties:
+          Text: =If(Label1_5DateOfRq_8.Text = "Payment checked by:", "Payment checked on:"," Payment Confirmed on:")
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =126.69
+          X: =104.95
+          Y: =690
+    - Label_Test1_Value_95:
+        Control: Label
+        Properties:
+          Text: =DataCardValue28.Text
+          FontWeight: =FontWeight.Bold
+          Height: =32
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =200.15
+          X: =738.39
+          Y: =236
+    - Label1_5DateOfRq_9:
+        Control: Label
+        Properties:
+          Text: =If(DataCardValue3.Selected.Value = "Specimen not collected", "Specimen not collected:","Specimen collected by:")
+          Height: =35
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =116.19
+          X: =625.94
+          Y: =231
+    - Label_Test1_Value_94:
+        Control: Label
+        Properties:
+          Text: =DataCardValue27.Text
+          FontWeight: =FontWeight.Bold
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =200.15
+          X: =738.39
+          Y: =193
+    - Label1_5DateOfRq_8:
+        Control: Label
+        Properties:
+          Text: =If(DataCardValue3.Selected.Value = "Test Denied", "Payment checked by:","Payment Confirmed by:")
+          Height: =52
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =116.19
+          X: =625.19
+          Y: =174
+    - Label1_5DateOfRq_7:
+        Control: Label
+        Properties:
+          Text: ="Request status:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =110.20
+          X: =625.19
+          Y: =152
+    - Label_Test1_Value_93:
+        Control: Label
+        Properties:
+          Text: =DataCardValue3.Selected.Value
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =145.43
+          X: =738.39
+          Y: =159
+    - LabelLabReFrmSchGender_1:
+        Control: Label
+        Properties:
+          Text: =(DataCardValue2.Text)
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =159.67
+          X: =256.37
+          Y: =121
+    - AppGend_6:
+        Control: Label
+        Properties:
+          Text: ="Invoice Ref ID"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =107.95
+          Y: =121
+    - Label_Test1_Value_77:
+        Control: Label
+        Properties:
+          Text: =DataCardValue1.Text
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =93.70
+          X: =738.39
+          Y: =121
+    - Arrow2:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: =Navigate(LabLagos_ReqForm4_ApprovalPage,ScreenTransition.None)
+          Fill: =RGBA(255, 255, 255, 1)
+          Height: =37.48
+          Width: =37.48
+          X: =107.95
+          Y: =9
+    - formHeader_PseahCall_13:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+            "
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =916.05
+          X: =107.95
+          Y: =725
+    - formHeader_PseahCall_12:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =6.00
+          Width: =107.20
+          X: =0.75
+          Y: =725
+    - LabelReceiptDoctorName_4:
+        Control: Label
+        Properties:
+          Text: =DataCardValue4.Text
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =233.89
+          X: =643
+          Y: =621
+    - LabelTotalNaira_Cost_5:
+        Control: Label
+        Properties:
+          Text: =Text(Value(DataCardValue12.Text),"[$-en-US]#,###.00")
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =85.46
+          X: =504.50
+          Y: =630
+    - LabelNairaEquivalent_5:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Naira Equivalent:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =141.68
+          X: =389.81
+          Y: =630
+    - Label1_1ReqDoctor_5:
+        Control: Label
+        Properties:
+          Text: ="Requesting Doctor:"
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =643
+          Y: =593
+    - LabelTotalUSDCost_5:
+        Control: Label
+        Properties:
+          Text: =Text(Value(DataCardValue11.Text),"[$-en-US]#,###.00")
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =85.46
+          X: =504.50
+          Y: =593
+    - LabelTotalChargeUSD_5:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Total Charge in $:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =141.68
+          X: =389.81
+          Y: =593
+    - Label1_9_AddTest5_5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 5:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =123.69
+          X: =107.95
+          Y: =521
+    - Label_Test1_Value_76:
+        Control: Label
+        Properties:
+          Text: =DataCardValue25.Text
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =504.50
+          Y: =517
+    - Label_Test1_Value_75:
+        Control: Label
+        Properties:
+          Text: =DataCardValue21.Text
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =256.37
+          Y: =517
+    - Label_Test1_Value_74:
+        Control: Label
+        Properties:
+          Text: =DataCardValue24.Text
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =504.50
+          Y: =482
+    - Label1_9_AddTest4_5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 4:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =123.69
+          X: =107.95
+          Y: =482
+    - Label_Test1_Value_73:
+        Control: Label
+        Properties:
+          Text: =DataCardValue20.Text
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =256.37
+          Y: =482
+    - Label_Test1_Value_72:
+        Control: Label
+        Properties:
+          Text: =DataCardValue23.Text
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =504.50
+          Y: =439
+    - Label1_9_AddTest3_5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 3:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =123.69
+          X: =107.95
+          Y: =439
+    - Label_Test1_Value_71:
+        Control: Label
+        Properties:
+          Text: =DataCardValue19.Text
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =256.37
+          Y: =439
+    - Label_Test1_Value_70:
+        Control: Label
+        Properties:
+          Text: =DataCardValue22.Text
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =504.50
+          Y: =399
+    - Label1_8_AddTest2_5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 2:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =123.69
+          X: =107.95
+          Y: =398
+    - Label_Test1_Value_69:
+        Control: Label
+        Properties:
+          Text: =DataCardValue18.Text
+          FontWeight: =FontWeight.Bold
+          Height: =34
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =256.37
+          Y: =398
+    - Label_Test1_Value_68:
+        Control: Label
+        Properties:
+          Text: =DataCardValue9.Text
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =504.50
+          Y: =360
+    - Label1_4_AddTest1_5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 1:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =123.69
+          X: =107.95
+          Y: =358
+    - Label_Test1_Value_67:
+        Control: Label
+        Properties:
+          Text: =DataCardValue8.Text
+          FontWeight: =FontWeight.Bold
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =256.37
+          Y: =357
+    - Label1_15:
+        Control: Label
+        Properties:
+          Text: ="Amount in $"
+          FontWeight: =FontWeight.Bold
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =95.20
+          X: =504.50
+          Y: =326
+    - Label1_3MimID_11:
+        Control: Label
+        Properties:
+          Text: ="Destination country:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =137.93
+          X: =623
+          Y: =348
+    - Label_Test1_Value_66:
+        Control: Label
+        Properties:
+          Text: =DataCardValue17.Text
+          FontWeight: =FontWeight.Bold
+          Height: =31
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =206
+          X: =766
+          Y: =350
+    - Label1_3MimID_10:
+        Control: Label
+        Properties:
+          Text: ="Mimosa ID:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =112.45
+          X: =107.95
+          Y: =224
+    - Label_Test1_Value_65:
+        Control: Label
+        Properties:
+          Text: =DataCardValue15.Text
+          FontWeight: =FontWeight.Bold
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =197
+          X: =256.37
+          Y: =228
+    - Label_Test1_Value_64:
+        Control: Label
+        Properties:
+          Text: =DataCardValue35.Text
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =140.18
+          X: =256.37
+          Y: =193
+    - Label1_Dob_5:
+        Control: Label
+        Properties:
+          Text: ="Applicant Date of birth:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =159.67
+          X: =107.95
+          Y: =193
+    - Label_Test1_Value_63:
+        Control: Label
+        Properties:
+          Text: =DataCardValue5.Text
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =93.70
+          X: =832.09
+          Y: =121
+    - LabelLabReFrmSchGender:
+        Control: Label
+        Properties:
+          Text: =DataCardValue6.Text
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =93.70
+          X: =256.37
+          Y: =154
+    - AppGend_5:
+        Control: Label
+        Properties:
+          Text: ="Applicant Gender:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =107.95
+          Y: =156
+    - Label1_5DateOfRq_5:
+        Control: Label
+        Properties:
+          Text: ="Date of request:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =113.19
+          X: =625.19
+          Y: =121
+    - AppInfo_5:
+        Control: Label
+        Properties:
+          Text: ="Invoice Detail"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =197.15
+          X: =402.55
+          Y: =74
+    - IconPrint_4:
+        Control: Classic/Icon
+        Variant: Print
+        Properties:
+          OnSelect: =Print()
+          AccessibleLabel: ="printScreen"
+          Height: =38
+          Icon: =Icon.Print
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          TabIndex: =0
+          Width: =47.23
+          X: =796.86
+          Y: =21
+    - formHeader_7:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+
+
+            MIGRATION HEALTH ASSESSMENT CENTRE, NIGERIA"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =69
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =1022.49
+          X: =0.00
+          Y: =5
+    - Image_IomLogo_5:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =139.51
+          X: =0.91
+          Y: =4
+    - Image1_6:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =138.60
+          X: =883.82

@@ -1,0 +1,799 @@
+- LabLagos_ReqForm1:
+    Control: Screen
+    Properties:
+      Fill: =
+    Children:
+    - Icon2:
+        Control: Classic/Icon
+        Variant: Warning
+        Properties:
+          Icon: =Icon.Warning
+          Visible: =
+          X: =32
+          Y: =118
+    - TextInputLagos_ReqFm1_FirstName:
+        Control: Classic/TextInput
+        Properties:
+          OnSelect: =true
+          AccessibleLabel: ="mim_input"
+          Default: =
+          HintText: ="Enter first name"
+          Reset: =true
+          DisplayMode: =If(IsBlank(TextInputLagos_ReqFm1_FirstName), DisplayMode.Disabled, DisplayMode.Edit)
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =239.88
+          X: =245
+          Y: =273
+    - LabelLagos_ReqFm1_MimosaIDName_2:
+        Control: Label
+        Properties:
+          Text: ="First name:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =112.45
+          X: =96
+          Y: =279
+    - TextInputLagos_ReqFm1_LastName:
+        Control: Classic/TextInput
+        Properties:
+          OnSelect: =true
+          AccessibleLabel: ="mim_input"
+          Default: =
+          HintText: ="Enter Lastname"
+          Reset: =true
+          DisplayMode: =If(IsBlank(TextInputLagos_ReqFm1_LastName), DisplayMode.Disabled, DisplayMode.Edit)
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =239.88
+          X: =245
+          Y: =234
+    - LabelLagos_ReqFm1_MimosaIDName_1:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Surname
+            (Last name)"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =112.45
+          X: =96
+          Y: =240
+    - LabelLagos_Req1ClntMadePayment:
+        Control: Label
+        Properties:
+          Text: =If(CheckboxLagReq1NoFee.Value,"I confirm that this is a no fee request.","")
+          Font: =Font.Arial
+          Height: =37
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =207
+          X: =669
+          Y: =227
+    - LabelLagos_ReqFm1_DateOfRqName_1:
+        Control: Label
+        Properties:
+          Text: ="Mission rate:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =669
+          Y: =97
+    - DropdownLagMissRate:
+        Control: Classic/DropDown
+        Properties:
+          Items: =NG_LabREQ_MissionRate.MissionRate
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          Width: =154
+          X: =752
+          Y: =93
+    - CheckboxLagReq1NoFee:
+        Control: Classic/CheckBox
+        Properties:
+          Text: ="No Fee Request"
+          Size: =10
+          X: =334
+          Y: =322
+    - TextCanvas1_1:
+        Control: Text
+        Properties:
+          FontColor: =RGBA(255, 255, 255, 1)
+          Size: =26.24
+          Text: ="LabREQ"&Char(174)
+          Weight: ='TextCanvas.Weight'.Bold
+          Height: =57
+          Width: =121.44
+          X: =449.78
+    - LabelLagos_ReqFm1_AppInfo_1:
+        Control: Label
+        Properties:
+          Text: ="LAGOS"
+          Align: =Align.Center
+          BorderColor: =RGBA(39, 113, 194, 1)
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(15, 108, 189, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =31
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =138.68
+          X: =434.79
+          Y: =69
+    - ComboBoxLagos_ReqFm1_NofTests:
+        Control: Classic/ComboBox
+        Properties:
+          OnSelect: =
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NG_No_of_TestDropDown.Title
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =85.46
+          X: =243
+          Y: =335
+    - LabelLagos_ReqFm1_AddTest1_1:
+        Control: Label
+        Properties:
+          Text: ="No of Tests needed:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =123.69
+          X: =95
+          Y: =337
+    - Arrow5:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: |+
+            =Navigate(Welcome_ReqForm2_SubOffice4RqFms, ScreenTransition.None);
+          Fill: =RGBA(255, 255, 255, 1)
+          Height: =36.73
+          Width: =36.73
+          X: =82.46
+          Y: =9
+    - formLagos_ReqFm1_FootCopyRight:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =6.00
+          Width: =95.95
+          X: =0.00
+          Y: =725
+    - LabelLagos_ReqFm1_ReqDrValue:
+        Control: Label
+        Properties:
+          Text: |+
+            =User().FullName
+          Font: =Font.Arial
+          FontWeight: =FontWeight.Bold
+          Height: =38
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =233.89
+          X: =668.67
+          Y: =184
+    - ComboBoxLagos_ReqFm1_Test1Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: |-
+            =If(
+                ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "1",
+                DisplayMode.Edit,
+                If(
+                    ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "2",
+                    DisplayMode.Edit,
+                    If(
+                        ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "3",
+                        DisplayMode.Edit,
+                        If(
+                            ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "4",
+                            DisplayMode.Edit,
+                            If(
+                                ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "5",
+                                DisplayMode.Edit,
+                                DisplayMode.Disabled
+                            )
+                        )
+                    )
+                )
+            )
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =242
+          Y: =378
+    - ComboBoxLagos_ReqFm1_GenderVal:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="comboBoxGender"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select gender"
+          Items: =NGLag_GenderSelection.Title
+          NoSelectionText: ="Select one"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =154.10
+          X: =244.37
+          Y: =125
+    - LabelLagos_ReqFm1_DateOfRqVal:
+        Control: Label
+        Properties:
+          Text: =Text(Today(), "dd-mmm-yyyy")
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =766.88
+          Y: =125
+    - ImageLagos_ReqForm1Logo:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =138.60
+          X: =883.82
+    - formLagos_ReqFm1_FootPseah:
+        Control: Label
+        Properties:
+          Text: =
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =925.80
+          X: =95.95
+          Y: =725
+    - iconLagos_ReqFm1_Home:
+        Control: Classic/Icon
+        Variant: BackArrow
+        Properties:
+          OnSelect: |+
+            =Navigate(Welcome_ReqForm1_NwSR, ScreenTransition.None);
+          AccessibleLabel: ="backToHome"
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          Height: =62
+          Icon: =Icon.Home
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          TabIndex: =0
+          Width: =47.98
+          X: =828.35
+          Y: =3
+    - LabelLagos_ReqFm1_Test5Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(
+                CheckboxLagReq1NoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test5Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test5Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =530
+    - ComboBoxLagos_ReqFm1_Test5Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          NoSelectionText: ="Select test"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled)
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =243
+          Y: =534
+    - LabelLagos_ReqFm1_AddTest5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 5:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =123.69
+          X: =95
+          Y: =541
+    - LabelLagos_ReqFm1_Test4Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(
+                CheckboxLagReq1NoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test4Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test4Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =494
+    - ComboBoxLagos_ReqFm1_Test4Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          NoSelectionText: ="Select test"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "4",DisplayMode.Edit,If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled))
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =243
+          Y: =497
+    - LabelLagos_ReqFm1_AddTest4:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 4:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =123.69
+          X: =95
+          Y: =502
+    - LabelLagos_ReqFm1_NgnEqv:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Naira Equivalent:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =213.37
+          X: =366
+          Y: =615
+    - LabelLagos_ReqFm1_TotalNgn_Cost:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_TotUSDCost.Text) * (DropdownLagMissRate.SelectedText.Value)
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =573
+          Y: =615
+    - LabelLagos_ReqFm1_Test3Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(
+                CheckboxLagReq1NoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test3Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test3Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =454
+    - LabelLagos_ReqFm1_Test2Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(
+                CheckboxLagReq1NoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test2Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test2Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =416
+    - ComboBoxLagos_ReqFm1_Test3Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          NoSelectionText: ="Select test"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "3",DisplayMode.Edit,If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "4",DisplayMode.Edit,If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled)))
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =243
+          Y: =460
+    - ComboBoxLagos_ReqFm1_Test2Name:
+        Control: Classic/ComboBox
+        Properties:
+          OnSelect: =
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "2",DisplayMode.Edit,If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "3",DisplayMode.Edit,If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "4",DisplayMode.Edit,If(ComboBoxLagos_ReqFm1_NofTests.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled))))
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =243
+          Y: =419
+    - ComboBoxLagos_ReqFm1_DestCoun:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="comboDestCountry"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select country"
+          Items: =NGLag_CountryList.Title
+          NoSelectionText: ="Select one"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =239.88
+          X: =669
+          Y: =276
+    - ButtonLagos_ReqFm1_Confirm:
+        Control: Classic/Button
+        Properties:
+          OnSelect: |-
+            =If(
+                !IsBlank(TextInputLagos_ReqFm1_MimosaID.Text) && !IsBlank(TextInputLagos_ReqFm1_FirstName) && !IsBlank(TextInputLagos_ReqFm1_LastName),
+                Set(timeOfEntry, Text(Now(), ("hh:mm am/pm")));
+                Navigate( LabLagos_ReqForm2_ScrConf, ScreenTransition.None),
+                Notify("Please enter mimosa ID",  NotificationType.Error, 3000);
+            );
+          Text: ="Confirm"
+          Color: =RGBA(39, 113, 194, 1)
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =13.49
+          Width: =119.94
+          X: =469
+          Y: =678
+    - LabelLagos_ReqFm1_DestCoun:
+        Control: Label
+        Properties:
+          Text: ="Destination country:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =137.93
+          X: =555
+          Y: =274
+    - LabelLagos_ReqFm1_TotUSDCost:
+        Control: Label
+        Properties:
+          Text: |+
+            =If(
+                IsBlank(Sum(LabelLagos_ReqFm1_Test1Cost.Text,LabelLagos_ReqFm1_Test2Cost.Text,LabelLagos_ReqFm1_Test3Cost.Text,LabelLagos_ReqFm1_Test4Cost.Text,LabelLagos_ReqFm1_Test5Cost.Text)),
+                "0",
+                Sum(LabelLagos_ReqFm1_Test1Cost.Text,LabelLagos_ReqFm1_Test2Cost.Text,LabelLagos_ReqFm1_Test3Cost.Text,LabelLagos_ReqFm1_Test4Cost.Text,LabelLagos_ReqFm1_Test5Cost.Text)
+            )
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =573
+          Y: =578
+    - LabelLagos_ReqFm1_TotUSDName:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Total Charge in US$:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =213.37
+          X: =362
+          Y: =583
+    - LabelLagos_ReqFm1_Test1Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(
+                CheckboxLagReq1NoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test1Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxLagos_ReqFm1_Test1Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =378
+    - LabelLagos_ReqFm1_AmtInUSDName:
+        Control: Label
+        Properties:
+          Text: ="Amount in $"
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =88.46
+          X: =555
+          Y: =338
+    - LabelLagos_ReqFm1_AddTest3:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 3:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =123.69
+          X: =95
+          Y: =459
+    - LabelLagos_ReqFm1_AddTest2:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 2:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =123.69
+          X: =95
+          Y: =418
+    - LabelLagos_ReqFm1_DateOfRqName:
+        Control: Label
+        Properties:
+          Text: ="Date of request:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =669.30
+          Y: =125
+    - TextInputLagos_ReqFm1_MimosaID:
+        Control: Classic/TextInput
+        Properties:
+          OnSelect: =true
+          AccessibleLabel: ="mim_input"
+          Default: =
+          HintText: ="enter mimosa ID"
+          Reset: =true
+          DisplayMode: =If(IsBlank(TextInputLagos_ReqFm1_MimosaID), DisplayMode.Disabled, DisplayMode.Edit)
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =239.88
+          X: =245.13
+          Y: =194
+    - LabelLagos_ReqFm1_AppInfo:
+        Control: Label
+        Properties:
+          Text: ="APPLICANT INFORMATION"
+          BorderColor: =RGBA(39, 113, 194, 1)
+          Color: =RGBA(39, 113, 194, 1)
+          Fill: =RGBA(255, 255, 255, 1)
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =197.15
+          X: =95.95
+          Y: =87
+    - DatePickerLagos_ReqFm1_AppDobVal:
+        Control: Classic/DatePicker
+        Properties:
+          AccessibleLabel: ="AppDateofB"
+          DefaultDate: =
+          Reset: =true
+          StartYear: =1900
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =0.00
+          Size: =10.49
+          Width: =154.42
+          X: =244.37
+          Y: =159
+    - LabelLagos_ReqFm1_AddTest1:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 1:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =123.69
+          X: =95
+          Y: =378
+    - LabelLagos_ReqFm1_MimosaIDName:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Mimosa ID:
+            (NG Prefix only)"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =112.45
+          X: =95.95
+          Y: =200
+    - LabelLagos_ReqFm1_AppDobName:
+        Control: Label
+        Properties:
+          Text: ="Applicant Date of birth:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =159.67
+          X: =95.95
+          Y: =162
+    - LabelLagos_ReqFm1_ReqDocTitle:
+        Control: Label
+        Properties:
+          Text: ="Requesting Doctor"
+          Font: =Font.Arial
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =669.42
+          Y: =158
+    - LabelLagos_ReqFm1_AppGendName:
+        Control: Label
+        Properties:
+          Text: ="Applicant Gender:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =126.69
+          X: =95.95
+          Y: =125
+    - LabelLagos_ReqFm1_HeaderTitle:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+
+
+            MIGRATION HEALTH ASSESSMENT CENTRE, NIGERIA"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =69
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =1022.49
+          X: =0.00
+          Y: =1
+    - LabelLagos_ReqFm11_RecContainer:
+        Control: Rectangle
+        Properties:
+          Fill: =RGBA(237, 237, 237, 1)
+          Height: =348
+          Width: =862.60
+          X: =82
+          Y: =323

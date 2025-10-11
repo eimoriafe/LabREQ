@@ -1,0 +1,755 @@
+- LabAbuja_ReqForm1:
+    Control: Screen
+    Properties:
+      Fill: =
+    Children:
+    - ComboBoxAbujaRqFm1:
+        Control: Classic/ComboBox
+        Properties:
+          DisplayFields: =["Title"]
+          Items: =NGAbj_CountryList3.Title
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          Width: =231
+          X: =680
+          Y: =271
+    - TextInputAbuja_ReqFm1_FirstName:
+        Control: Classic/TextInput
+        Properties:
+          OnSelect: =true
+          AccessibleLabel: ="mim_input"
+          Default: =
+          HintText: ="Enter first name"
+          Reset: =true
+          DisplayMode: =If(IsBlank(TextInputAbuja_ReqFm1_FirstName), DisplayMode.Disabled, DisplayMode.Edit)
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =239.88
+          X: =245
+          Y: =271
+    - LabelAbuja_ReqFm1_FirstName:
+        Control: Label
+        Properties:
+          Text: ="First name:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =112.45
+          X: =96
+          Y: =277
+    - TextInputAbuja_ReqFm1_LastName:
+        Control: Classic/TextInput
+        Properties:
+          OnSelect: =true
+          AccessibleLabel: ="mim_input"
+          Default: =
+          HintText: ="Enter Lastname"
+          Reset: =true
+          DisplayMode: =If(IsBlank(TextInputAbuja_ReqFm1_LastName), DisplayMode.Disabled, DisplayMode.Edit)
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =239.88
+          X: =245
+          Y: =232
+    - LabelAbuja_ReqFm1_Surname:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Surname
+            (Last name)"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =112.45
+          X: =96
+          Y: =238
+    - LabelAbuja_Req1ClntMadePayment:
+        Control: Label
+        Properties:
+          Text: =If(CheckboxAbjNoFee.Value,"I confirm that this is a no fee request.","")
+          Font: =Font.Arial
+          Height: =37
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =207
+          X: =669
+          Y: =229
+    - LabelAbuja_ReqFm1_DateOfRqName_1:
+        Control: Label
+        Properties:
+          Text: ="Mission Rate:"
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =102
+          X: =669
+          Y: =99
+    - DropdownAbjMissRate:
+        Control: Classic/DropDown
+        Properties:
+          Items: =NG_LabREQ_MissionRate.MissionRate
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          Width: =149
+          X: =766
+          Y: =95
+    - CheckboxAbjNoFee:
+        Control: Classic/CheckBox
+        Properties:
+          Text: ="No Fee Request"
+          Size: =10
+          X: =340
+          Y: =329
+    - TextCanvas1_6:
+        Control: Text
+        Properties:
+          FontColor: =RGBA(255, 255, 255, 1)
+          Size: =26.24
+          Text: ="LabREQ"&Char(174)
+          Weight: ='TextCanvas.Weight'.Bold
+          Height: =57
+          Width: =121.44
+          X: =443.03
+    - LabelLagos_ReqFm1_AppInfo_2:
+        Control: Label
+        Properties:
+          Text: ="ABUJA"
+          Align: =Align.Center
+          BorderColor: =RGBA(39, 113, 194, 1)
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(15, 108, 189, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =31
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =138.68
+          X: =434.79
+          Y: =69
+    - ComboBoxAbuja_ReqFm1_NofTestsN:
+        Control: Classic/ComboBox
+        Properties:
+          OnSelect: =
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NG_No_of_TestDropDown.Title
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =85.46
+          X: =245
+          Y: =343
+    - LabelAbuja_ReqFm1_NofTestN:
+        Control: Label
+        Properties:
+          Text: ="No of Tests needed:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =123.69
+          X: =108
+          Y: =340
+    - Arrow4:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: =Navigate(Welcome_ReqForm2_SubOffice4RqFms,ScreenTransition.Fade);Reset(ComboBox_WRqFm2_SbOffc)
+          Fill: =RGBA(255, 255, 255, 1)
+          Height: =37.48
+          Width: =37.48
+          X: =95.95
+          Y: =13
+    - formAbuja_ReqFm1_FootPseah:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+            "
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =928.05
+          X: =95.95
+          Y: =725
+    - formAbuja_ReqFm1_FootCopyRight:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =6.00
+          Width: =95.95
+          X: =0.00
+          Y: =725
+    - ButtonAbuja_ReqFm1_Confirm:
+        Control: Classic/Button
+        Properties:
+          OnSelect: |-
+            =If(
+                Not(IsBlank(TextInputAbuja_ReqFm1_MimosaID.Text)),
+                Set(timeOfEntry, Text(Now(), ("hh:mm am/pm")));
+            	     
+                Navigate( LabAbuja_ReqForm2_ScrConf, ScreenTransition.None),
+                Notify("Please enter mimosa ID",  NotificationType.Error, 3000)
+            );
+          Text: ="Confirm"
+          Color: =RGBA(39, 113, 194, 1)
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =13.49
+          Width: =119.94
+          X: =485
+          Y: =678
+    - LabelAbuja_ReqFm1_NgnEqv:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Naira Equivalent:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =213.37
+          X: =345
+          Y: =623
+    - LabelAbuja_ReqFm1_TotalNgn_Cost:
+        Control: Label
+        Properties:
+          Text: =((LabelAbuja_ReqFm1_TotUSDCost.Text) * DropdownAbjMissRate.Selected.MissionRate)
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =621
+    - LabelAbuja_ReqFm1_TotUSDName:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Total Charge in US$:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =213.37
+          X: =345
+          Y: =586
+    - LabelAbuja_ReqFm1_TotUSDCost:
+        Control: Label
+        Properties:
+          Text: |+
+            =If(
+                IsBlank(Sum(LabelAbuja_ReqFm1_Test1Cost.Text,LabelAbuja_ReqFm1_Test2Cost.Text,LabelAbuja_ReqFm1_Test3Cost.Text,LabelAbuja_ReqFm1_Test4Cost.Text,LabelAbuja_ReqFm1_Test5Cost.Text)),
+                "0",
+                Sum(LabelAbuja_ReqFm1_Test1Cost.Text,LabelAbuja_ReqFm1_Test2Cost.Text,LabelAbuja_ReqFm1_Test3Cost.Text,LabelAbuja_ReqFm1_Test4Cost.Text,LabelAbuja_ReqFm1_Test5Cost.Text)
+            )
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =584
+    - LabelAbuja_ReqFm1_AddTest5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 5:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =123.69
+          X: =108
+          Y: =542
+    - ComboBoxAbuja_ReqFm1_Test5Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          NoSelectionText: ="Select test"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled)
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =245
+          Y: =540
+    - LabelAbuja_ReqFm1_Test5Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(CheckboxAbjNoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test5Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test5Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =536
+    - LabelAbuja_ReqFm1_AddTest4:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 4:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =123.69
+          X: =108
+          Y: =503
+    - ComboBoxAbuja_ReqFm1_Test4Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          NoSelectionText: ="Select test"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "4",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled))
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =245
+          Y: =503
+    - LabelAbuja_ReqFm1_Test4Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(CheckboxAbjNoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test4Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test4Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =502
+    - ComboBoxAbuja_ReqFm1_Test3Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          NoSelectionText: ="Select test"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "3",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "4",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled)))
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =245
+          Y: =466
+    - LabelAbuja_ReqFm1_AddTest3:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 3:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =123.69
+          X: =108
+          Y: =460
+    - LabelAbuja_ReqFm1_Test3Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(CheckboxAbjNoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test3Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test3Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =460
+    - ComboBoxAbuja_ReqFm1_Test2Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "2",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "3",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "4",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled))))
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =245
+          Y: =425
+    - LabelAbuja_ReqFm1_AddTest2:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 2:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =123.69
+          X: =108
+          Y: =419
+    - LabelAbuja_ReqFm1_Test2Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(CheckboxAbjNoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test2Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test2Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =422
+    - LabelAbuja_ReqFm1_Test1Cost:
+        Control: Label
+        Properties:
+          Text: |-
+            =If(CheckboxAbjNoFee.Value,
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test1Name.Selected.Title, CostValue*0),
+                LookUp(NGLag_TestName, Title = ComboBoxAbuja_ReqFm1_Test1Name.Selected.Title, CostValue))
+          Align: =Align.Justify
+          Color: =RGBA(9, 33, 98, 1)
+          Fill: =RGBA(214, 221, 224, 1)
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =68.39
+          X: =575
+          Y: =384
+    - ComboBoxAbuja_ReqFm1_Test1Name:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="selectCountryCombo"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select test"
+          Items: =NGLag_TestName.Title
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          DisplayMode: =If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "1",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "2",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "3",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "4",DisplayMode.Edit,If(ComboBoxAbuja_ReqFm1_NofTestsN.Selected.Title = "5",DisplayMode.Edit,DisplayMode.Disabled)))))
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =239.88
+          X: =244
+          Y: =384
+    - LabelAbuja_ReqFm1_AddTest1:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 1:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =123.69
+          X: =108
+          Y: =379
+    - LabelAbuja_ReqFm1_AmtInUSDName:
+        Control: Label
+        Properties:
+          Text: ="Amount in $"
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =88.46
+          X: =559
+          Y: =343
+    - LabelAbuja_ReqFm11_RecContainer:
+        Control: Rectangle
+        Properties:
+          Fill: =RGBA(237, 237, 237, 1)
+          Height: =331
+          Width: =862.60
+          X: =81
+          Y: =340
+    - LabelAbuja_ReqFm1_DestCoun:
+        Control: Label
+        Properties:
+          Text: ="Destination country:"
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =121
+          X: =559
+          Y: =271
+    - LabelAbuja_ReqFm1_MimosaIDName:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Mimosa ID:
+            (NG Prefix Only)"
+          Height: =35
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =112.45
+          X: =95.95
+          Y: =194
+    - TextInputAbuja_ReqFm1_MimosaID:
+        Control: Classic/TextInput
+        Properties:
+          OnSelect: =true
+          AccessibleLabel: ="mim_input"
+          Default: =
+          HintText: ="enter mimosa ID"
+          Reset: =true
+          DisplayMode: =If(IsBlank(TextInputAbuja_ReqFm1_MimosaID), DisplayMode.Disabled, DisplayMode.Edit)
+          Height: =33
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =239.88
+          X: =245.13
+          Y: =194
+    - LabelAbuja_ReqFm1_ReqDrValue:
+        Control: Label
+        Properties:
+          Text: |+
+            =User().FullName
+          Font: =Font.Arial
+          FontWeight: =FontWeight.Bold
+          Height: =38
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =233.89
+          X: =668.67
+          Y: =184
+    - LabelAbuja_ReqFm1_AppDobName:
+        Control: Label
+        Properties:
+          Text: ="Applicant Date of birth:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =159.67
+          X: =95.95
+          Y: =162
+    - DatePickerAbuja_ReqFm1_AppDobVal:
+        Control: Classic/DatePicker
+        Properties:
+          AccessibleLabel: ="AppDateofB"
+          DefaultDate: =
+          Reset: =true
+          StartYear: =1900
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =0.00
+          Size: =10.49
+          Width: =154.42
+          X: =244.37
+          Y: =159
+    - LabelAbuja_ReqFm1_ReqDocTitle:
+        Control: Label
+        Properties:
+          Text: ="Requesting Doctor"
+          Font: =Font.Arial
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =669.42
+          Y: =158
+    - LabelAbuja_ReqFm1_DateOfRqVal:
+        Control: Label
+        Properties:
+          Text: =Text(Today(), "dd-mmm-yyyy")
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =766.88
+          Y: =125
+    - LabelAbuja_ReqFm1_DateOfRqName:
+        Control: Label
+        Properties:
+          Text: ="Date of request:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =669.30
+          Y: =125
+    - ComboBoxAbuja_ReqFm1_GenderVal:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="comboBoxGender"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select gender"
+          Items: =NGLag_GenderSelection.Title
+          NoSelectionText: ="Select one"
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =154.10
+          X: =244.37
+          Y: =125
+    - LabelAbuja_ReqFm1_AppGendName:
+        Control: Label
+        Properties:
+          Text: ="Applicant Gender:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.21
+          Width: =126.69
+          X: =95.95
+          Y: =125
+    - LabelAbuja_ReqFm1_AppInfo:
+        Control: Label
+        Properties:
+          Text: ="APPLICANT INFORMATION"
+          BorderColor: =RGBA(39, 113, 194, 1)
+          Color: =RGBA(39, 113, 194, 1)
+          Fill: =RGBA(255, 255, 255, 1)
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =197.15
+          X: =95.95
+          Y: =87
+    - iconAbuja_ReqFm1_Home:
+        Control: Classic/Icon
+        Variant: BackArrow
+        Properties:
+          OnSelect: =Navigate(Welcome_ReqForm1_NwSR, ScreenTransition.Fade)
+          AccessibleLabel: ="backToHome"
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          Height: =62
+          Icon: =Icon.Home
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          TabIndex: =0
+          Width: =47.98
+          X: =876.32
+          Y: =1
+    - LabelAbuja_ReqFm1_HeaderTitle:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+
+
+            MIGRATION HEALTH ASSESSMENT CENTRE, NIGERIA"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =69
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =1024.00
+          X: =0.00
+          Y: =1
+    - ImageAbuja_ReqForm1Logo:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =138.60
+          X: =883.82

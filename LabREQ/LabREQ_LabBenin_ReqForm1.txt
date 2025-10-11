@@ -1,0 +1,97 @@
+- LabBenin_ReqForm1:
+    Control: Screen
+    Properties:
+      Fill: =
+    Children:
+    - ButtonCanvas3:
+        Control: Button
+        Properties:
+          OnSelect: =Launch("https://app.powerbi.com/sharepointlist/groups/97ef9181-c854-46e2-9753-99ee15b685af/reports/2be1cd22-e14a-4c8f-93fc-c786fabaeffa?spListId=%7Bad2ff024-d4ce-4f62-a57a-60c1fe530c36%7D&spListUrl=https:%2F%2Fiomint.sharepoint.com%2Fteams%2FIOMAbujaMainoffice%2FMHAC%2FLists%2FNGLag_AddLabTest_BackendDb&spListUniqueId=6c8138ae-6cab-4efb-b432-5e86650fd0fead2ff024-d4ce-4f62-a57a-60c1fe530c36&culture=en-US")
+          Width: =71.96
+          X: =352.33
+          Y: =220
+    - formBenin_RqFm1_Pseah:
+        Control: Label
+        Properties:
+          Text: ="PLEASE CALL/TEXT THIS NUMBER 08127405825 IF YOU EXPERIENCE OR WITNESS SEXUAL ABUSE, EXPLOITATION OR HARASSMENT."
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =927.30
+          X: =96.70
+          Y: =725
+    - formBenin_RqFm1_CpyRgt:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =6.00
+          Width: =95.95
+          X: =0.75
+          Y: =725
+    - LabelBenin_RqFm1_BeninNtAct:
+        Control: Label
+        Properties:
+          Text: ="Sorry, Benin Center not yet active."
+          Align: =Align.Center
+          FontWeight: =FontWeight.Bold
+          Height: =41
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =297.60
+          X: =359.82
+          Y: =355
+    - IconBenin_RqFm1_Home:
+        Control: Classic/Icon
+        Variant: Cancel
+        Properties:
+          OnSelect: =Navigate(Welcome_ReqForm2_SubOffice4RqFms, ScreenTransition.None);Reset(ComboBox_WRqFm2_SbOffc)
+          AccessibleLabel: ="closeReceipt"
+          Color: =RGBA(255, 255, 255, 1)
+          Height: =47
+          Icon: =Icon.BackArrow
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          TabIndex: =0
+          Width: =61.10
+          X: =64.47
+          Y: =15
+    - ImageBenin_RqFm1_IOMLogo:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =138.60
+          X: =886.07
+          Y: =5
+    - formBenin_RqFm1_LTRA:
+        Control: Label
+        Properties:
+          Text: |-
+            ="LABORATORY TEST REQUEST APP
+            MIGRATION HEALTH ASSESSMENT CENTRE, NIGERIA"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =69
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =12.74
+          Width: =1022.49
+          X: =0.00
+          Y: =5

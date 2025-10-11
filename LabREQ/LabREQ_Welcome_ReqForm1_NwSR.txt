@@ -1,0 +1,281 @@
+- Welcome_ReqForm1_NwSR:
+    Control: Screen
+    Variant: tabletLayout_Tutorial_ver3.0
+    Children:
+    - Label7_1:
+        Control: Label
+        Properties:
+          Text: ="Current Role:"
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          Size: =10
+          Width: =102
+          X: =733
+          Y: =44
+    - Label7:
+        Control: Label
+        Properties:
+          Text: =LookUp(NG_UserRole_LabREQ, UserID = User().Email, UserRole)
+          FontWeight: =FontWeight.Bold
+          Height: =37
+          Italic: =true
+          Size: =9
+          Width: =205
+          X: =733
+          Y: =64
+    - Button_WRqFm1_SearchRec_5:
+        Control: Classic/Button
+        Properties:
+          OnSelect: |
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin","Forex Manager","Management","Finance"]),
+                Navigate(
+                    Welcome_ReqForm2_SubOffice4ViewRecords,
+                    ScreenTransition.None
+                ),
+                Notify(
+                    Upper("Authorized users only."),
+                    NotificationType.Error
+                )
+            );
+          Text: ="View Records"
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Forex Manager","Management","Finance"] ),
+                true,    false
+            )
+          Width: =137.18
+          X: =96
+          Y: =405
+    - Button_WRqFm1_SearchRec_4:
+        Control: Classic/Button
+        Properties:
+          OnSelect: |
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole = "Admin" || UserRole = "Forex Manager" || UserRole = "Management"),
+                Navigate(
+                    MissionRateForm,
+                    ScreenTransition.None
+                ),
+                Notify(
+                    Upper("Authorized users only."),
+                    NotificationType.Error
+                )
+            );
+          Text: ="Mission rate"
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Forex Manager","Management"] ),
+                true,    false
+            )
+          Width: =137.18
+          X: =96
+          Y: =358
+    - Button_WRqFm1_SearchRec_3:
+        Control: Classic/Button
+        Properties:
+          OnSelect: |
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole = "Admin"),
+                Navigate(
+                    UserMgt,
+                    ScreenTransition.None
+                ),
+                Notify(
+                    Upper("Admin use only."),
+                    NotificationType.Error
+                )
+            );
+          Text: ="Admin"
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole = "Admin" ),
+                true,    false
+            )
+          Width: =137.18
+          X: =733
+          Y: =220
+    - Label_WRqFm3_MHAC_3:
+        Control: Label
+        Properties:
+          Text: ="Migration Health Assessment Centre (MHAC). Nigeria."
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(39, 113, 194, 1)
+          Font: =Font.'Lato Black'
+          FontWeight: =FontWeight.Bold
+          Height: =51
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =10.94
+          Width: =500
+          X: =233
+          Y: =140
+    - image_WRqFm3_IOMlogo_3:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =85
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =165.67
+          X: =436.29
+          Y: =40
+    - Label_WReqFm0_LTRA_1:
+        Control: Label
+        Properties:
+          Text: ="LabREQ"&Char(174)
+          Align: =Align.Center
+          BorderStyle: =BorderStyle.None
+          BorderThickness: =5
+          Color: =RGBA(39, 113, 194, 1)
+          FocusedBorderThickness: =4
+          Font: =Font.'Lato Black'
+          FontWeight: =FontWeight.Bold
+          Height: =70
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =29.99
+          Width: =263.87
+          X: =380.06
+          Y: =191
+    - Button_WRqFm1_SearchRec_2:
+        Control: Classic/Button
+        Properties:
+          OnSelect: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin","Lab","Forex Manager","Management","Finance"]
+                ),
+                Navigate(
+                    Welcome_ReqForm2_SubOffice4Apprv,
+                    ScreenTransition.None
+                ),
+                (Notify(
+                    Upper("Access denied. Please contact your IT admin."),
+                    NotificationType.Error
+                ))
+            )
+          Text: ="Approval"
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin","Management","Lab", "Finance","Forex Manager"]),
+                true,    false
+            )
+          Width: =137.18
+          X: =96
+          Y: =311
+    - Button_WRqFm1_SearchRec_1:
+        Control: Classic/Button
+        Properties:
+          OnSelect: =Navigate(Welcome_ReqForm2_SubOffice4DshBrd,ScreenTransition.None)
+          Text: ="View Dashboard"
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =137.18
+          X: =96
+          Y: =266
+    - Arrow_WRqFm1_Bck:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: =Navigate(WelcomeReqForm0, ScreenTransition.Fade)
+          Height: =37.48
+          Width: =37.48
+          X: =29.99
+          Y: =40
+    - Button_WRqFm1_NewReq:
+        Control: Classic/Button
+        Properties:
+          OnSelect: |
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Doctor","Admin","Management"]
+                ),
+                Navigate(
+                    Welcome_ReqForm2_SubOffice4RqFms,
+                    ScreenTransition.None
+                ),
+                (Notify(
+                    Upper("Only Doctors are authorized"),
+                    NotificationType.Error
+                ))
+            );
+          Text: ="New Request"
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Doctor", "Management"] ),
+                true,    false
+            )
+          Width: =137.18
+          X: =96
+          Y: =220
+    - form_WRqFm1_CpyRght:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =1023.25
+          X: =0.00
+          Y: =725
+    - Image_WRqFm1_BckPic:
+        Control: Image
+        Properties:
+          Image: =Background
+          BorderStyle: =BorderStyle.Dotted
+          Height: =768
+          ImagePosition: =ImagePosition.Tile
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =1023.25
+          X: =1

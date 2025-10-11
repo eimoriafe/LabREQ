@@ -1,0 +1,631 @@
+- LabLagos_ReqForm2_ScrConf:
+    Control: Screen
+    Properties:
+      Fill: =
+    Children:
+    - LabelLagos_ReqForm2_FirstNameVal:
+        Control: Label
+        Properties:
+          Text: =(TextInputLagos_ReqFm1_FirstName.Text)
+          FontWeight: =FontWeight.Bold
+          Height: =32
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =211.40
+          X: =228
+          Y: =280
+    - LabelLagos_ReqForm2_LastNameVall:
+        Control: Label
+        Properties:
+          Text: =(TextInputLagos_ReqFm1_LastName.Text)
+          FontWeight: =FontWeight.Bold
+          Height: =32
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =211.40
+          X: =227
+          Y: =238
+    - LabelLagos_ReqFm1_FirstName:
+        Control: Label
+        Properties:
+          Text: ="First name:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =112.45
+          X: =82
+          Y: =280
+    - LabelLagos_ReqFm1_Surname:
+        Control: Label
+        Properties:
+          Text: ="Surname"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =112.45
+          X: =82
+          Y: =239
+    - LabelLagos_Req2ClntMadePayment:
+        Control: Label
+        Properties:
+          Text: =If(CheckboxLagReq1NoFee.Value,"Doctor confirmed that this is a no fee request.","")
+          Font: =Font.Arial
+          Height: =37
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =207
+          X: =102
+          Y: =600
+    - LabelLagos_ReqFm1_MissnRateLabel_1:
+        Control: Label
+        Properties:
+          Text: =DropdownLagMissRate.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMissionRate'
+          FontWeight: =FontWeight.Bold
+          Height: =34
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =10
+          Width: =114
+          X: =739
+          Y: =94
+    - LabelLagos_ReqFm1_MissnRateLabel:
+        Control: Label
+        Properties:
+          Text: ="Current Mission rate:"
+          Height: =34
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8
+          Width: =114
+          X: =625
+          Y: =94
+    - LabelAbj_ReqForm2_AppGendName_4:
+        Control: Label
+        Properties:
+          Text: ="Lagos SO"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =82.46
+          Y: =73
+    - TextCanvas1_2:
+        Control: Text
+        Properties:
+          FontColor: =RGBA(255, 255, 255, 1)
+          Size: =26.24
+          Text: ="LabREQ"&Char(174)
+          Weight: ='TextCanvas.Weight'.Bold
+          Height: =57
+          Width: =121.44
+          X: =456.53
+          Y: =4
+    - ImageLagos_ReqForm2_logo:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =138.60
+          X: =883.82
+          Y: =4
+    - LabelLagos_ReqForm2_SubmitAft:
+        Control: Label
+        Properties:
+          Text: ="Click submit after confirming details"
+          Align: =Align.Center
+          Height: =22
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =269.12
+          X: =404.05
+          Y: =695
+    - ArrowLagos_ReqForm2_Back:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: =Navigate(LabLagos_ReqForm1, ScreenTransition.None);
+          AccessibleLabel: ="arrRqfm2back"
+          Fill: =RGBA(255, 255, 255, 1)
+          Height: =35.98
+          Width: =34.48
+          X: =85.46
+          Y: =21
+    - ButtonLagos_ReqForm2_Subt4Insrt:
+        Control: Classic/Button
+        Properties:
+          OnSelect: "=    \n\nSet(timeOfEntry, Text(Now(), (\"hh:mm am/pm\")));\n	Set(unID, (Mid(GUID(),1,12)));\n	Patch(NGLag_AddLabTest_BackendDb,       Defaults(NGLag_AddLabTest_BackendDb),\n      {\n			Applicant_Gender:ComboBoxLagos_ReqFm1_GenderVal.Selected.Title,\n			Applica_dob:DatePickerLagos_ReqFm1_AppDobVal.SelectedDate,\n            mimosa_id:TextInputLagos_ReqFm1_MimosaID.Text,\n            SurName:TextInputLagos_ReqFm1_LastName.Text,\n            FirstName:TextInputLagos_ReqFm1_FirstName.Text,\n            dest_country:ComboBoxLagos_ReqFm1_DestCoun.Selected.Title,\n            add_Test1_name: ComboBoxLagos_ReqFm1_Test1Name.Selected.Title,\n            add_Test2_Name: ComboBoxLagos_ReqFm1_Test2Name.Selected.Title,\n            add_Test3_Name: ComboBoxLagos_ReqFm1_Test3Name.Selected.Title,\n            add_Test4_Name: ComboBoxLagos_ReqFm1_Test4Name.Selected.Title,\n            add_Test5_Name: ComboBoxLagos_ReqFm1_Test5Name.Selected.Title,\n            AmountTest_1: Value(LabelLagos_ReqFm1_Test1Cost.Text),\n            AmountTest_2: Value(LabelLagos_ReqFm1_Test2Cost.Text),\n            AmountTest_3: Value(LabelLagos_ReqFm1_Test3Cost.Text),\n            AmountTest_4: Value(LabelLagos_ReqFm1_Test4Cost.Text),\n            AmountTest_5: Value(LabelLagos_ReqFm1_Test5Cost.Text),\n            TotalUSDAmount: Value(LabelLagos_ReqFm1_TotUSDCost.Text),\n            TotalNairaAmount: Value(LabelLagos_ReqFm1_TotalNgn_Cost.Text),\n            DateofReqLagDB: LabelLagos_ReqFm1_DateOfRqVal.Text,\n            reqDoctor: LabelLagos_ReqFm1_ReqDrValue.Text,\n            timeofEntry: timeOfEntry,\n            InvoiceRef_ID: unID,\n            MissionRate:DropdownLagMissRate.SelectedText.Value\n        }\n    );\n	Navigate(LabLagos_ReqForm4_ScrSuccess, ScreenTransition.None);\n    Patch(NGLag_LabReq_ApprovalFlow_Db, Defaults(NGLag_LabReq_ApprovalFlow_Db),\n        {\n            InvoiceRef_ID:Label_InvoiceRefNo_Value_2.Text,\n            DateofReqLagApp:LabelLagos_ReqFm1_DateOfRqVal.Text,\n            reqDoctor:LabelLagos_ReqFm1_ReqDrValue.Text,\n            TotalUSDAmount:Value(LabelLagos_ReqFm1_TotUSDCost.Text)\n        }\n    );\n    \n	\n   \n   \n    \n    \n          \n"
+          Text: ="Submit"
+          Color: =RGBA(39, 113, 194, 1)
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =41
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =13.49
+          Width: =182.91
+          X: =443.03
+          Y: =647
+    - formLagos_ReqForm2_Copyright:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =119.94
+          X: =0.00
+          Y: =725
+    - formLagos_ReqForm2_PseahFtr:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+            "
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =973.77
+          X: =47.98
+          Y: =725
+    - LabelLagos_ReqForm2_RcpDocName:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_ReqDrValue.Text)
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =233.89
+          X: =634.19
+          Y: =541
+    - LabelLagos_ReqForm2_TotNgnCost:
+        Control: Label
+        Properties:
+          Text: =Text(Value(LabelLagos_ReqFm1_TotalNgn_Cost.Text),"[$-en-US]#,###.00")
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9
+          Width: =84
+          X: =496
+          Y: =589
+    - LabeLagos_ReqForm2_NgnEqvName:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Naira Equivalent:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =141.68
+          X: =366
+          Y: =589
+    - LabelLagos_ReqForm2_ReqDocName:
+        Control: Label
+        Properties:
+          Text: ="Requesting Doctor:"
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =126.69
+          X: =634.19
+          Y: =518
+    - LabelLagos_ReqForm2_TotUSDCost:
+        Control: Label
+        Properties:
+          Text: =Text(Value(LabelLagos_ReqFm1_TotUSDCost.Text),"[$-en-US]#,###.00")
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(128, 128, 128, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9
+          Width: =84
+          X: =496
+          Y: =552
+    - LabelLagos_ReqForm2_TotChgUSDName:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Total Charge in $:
+            "
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =141.68
+          X: =366
+          Y: =552
+    - LabelLagos_ReqForm2_AddTest5:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 5:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =123.69
+          X: =85
+          Y: =519
+    - LabelLagos_ReqForm2_Test5Cost:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_Test5Cost.Text)
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =482
+          Y: =515
+    - LabelLagos_ReqForm2_Test5Name:
+        Control: Label
+        Properties:
+          Text: =(ComboBoxLagos_ReqFm1_Test5Name.Selected.Title)
+          FontWeight: =FontWeight.Bold
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =198.65
+          X: =227
+          Y: =521
+    - Label_Lagos_ReqForm2_Test4Cost:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_Test4Cost.Text)
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =482
+          Y: =480
+    - LabelLagos_ReqForm2_AddTest4:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 4:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =123.69
+          X: =85
+          Y: =480
+    - LabelLagos_ReqForm2_Test4Name:
+        Control: Label
+        Properties:
+          Text: =(ComboBoxLagos_ReqFm1_Test4Name.Selected.Title)
+          FontWeight: =FontWeight.Bold
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =223
+          Y: =480
+    - LabelLagos_ReqForm2_Test3Cost:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_Test3Cost.Text)
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =482
+          Y: =437
+    - LabelLagos_ReqForm2_AddTest3:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 3:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =123.69
+          X: =85
+          Y: =437
+    - LabelLagos_ReqForm2_Test3Name:
+        Control: Label
+        Properties:
+          Text: =(ComboBoxLagos_ReqFm1_Test3Name.Selected.Title)
+          FontWeight: =FontWeight.Bold
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =223
+          Y: =443
+    - LabelLagos_ReqForm2_Test2Cost:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_Test2Cost.Text)
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =482
+          Y: =397
+    - LabelLagos_ReqForm2_AddTest2:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 2:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =123.69
+          X: =85
+          Y: =396
+    - LabelLagos_ReqForm2_Test2Name:
+        Control: Label
+        Properties:
+          Text: =(ComboBoxLagos_ReqFm1_Test2Name.Selected.Title)
+          FontWeight: =FontWeight.Bold
+          Height: =26
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =223
+          Y: =401
+    - LabelLagos_ReqForm2_Test1Cost:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_Test1Cost.Text)
+          BorderStyle: =BorderStyle.None
+          BorderThickness: =2
+          Fill: =RGBA(255, 255, 255, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =84.71
+          X: =482
+          Y: =355
+    - LabelLagos_ReqForm2_AddTest1:
+        Control: Label
+        Properties:
+          Text: ="Additional Test 1:"
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =123.69
+          X: =85
+          Y: =356
+    - LabelLagos_ReqForm2_Test1Name:
+        Control: Label
+        Properties:
+          Text: =(ComboBoxLagos_ReqFm1_Test1Name.Selected.Title)
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =211.40
+          X: =223
+          Y: =354
+    - LabelLagos_ReqForm2_AmtInUSD:
+        Control: Label
+        Properties:
+          Text: ="Amount in $"
+          FontWeight: =FontWeight.Bold
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =95.20
+          X: =480
+          Y: =311
+    - LabelLagos_ReqForm2_DestCounName:
+        Control: Label
+        Properties:
+          Text: ="Destination country:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =137.93
+          X: =641
+          Y: =356
+    - LabelLagos_ReqForm2_DestCounVal:
+        Control: Label
+        Properties:
+          Text: =ComboBoxLagos_ReqFm1_DestCoun.Selected.Title
+          FontWeight: =FontWeight.Bold
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =164.17
+          X: =786
+          Y: =356
+    - LabelLagos_ReqForm2_MimosaIDName:
+        Control: Label
+        Properties:
+          Text: ="Mimosa ID:"
+          Height: =29
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =112.45
+          X: =82.46
+          Y: =203
+    - LabelLagos_ReqForm2_MimosaIDVal:
+        Control: Label
+        Properties:
+          Text: =(TextInputLagos_ReqFm1_MimosaID.Text)
+          FontWeight: =FontWeight.Bold
+          Height: =32
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =210
+          X: =228.64
+          Y: =200
+    - LabelLagos_ReqForm2_AppDobVal:
+        Control: Label
+        Properties:
+          Text: =(DatePickerLagos_ReqFm1_AppDobVal.SelectedDate)
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =134.93
+          X: =228.64
+          Y: =165
+    - LabelLagos_ReqForm2_ApDobName:
+        Control: Label
+        Properties:
+          Text: ="Applicant Date of birth:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =159.67
+          X: =82.46
+          Y: =165
+    - LabelLagos_ReqForm2_TimOfEntVal:
+        Control: Label
+        Properties:
+          Text: =timeOfEntry
+          FontWeight: =FontWeight.Bold
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =93.70
+          X: =815.60
+          Y: =124
+    - LabelLagos_ReqForm2_DateOfEntVal:
+        Control: Label
+        Properties:
+          Text: =(LabelLagos_ReqFm1_DateOfRqVal.Text)
+          FontWeight: =FontWeight.Bold
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =93.70
+          X: =712.90
+          Y: =124
+    - LabelLagos_ReqForm2_AppGendVal:
+        Control: Label
+        Properties:
+          Text: =(ComboBoxLagos_ReqFm1_GenderVal.Selected.Title)
+          FontWeight: =FontWeight.Bold
+          Height: =27
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =93.70
+          X: =228.64
+          Y: =128
+    - LabelLagos_ReqForm2_AppGendName:
+        Control: Label
+        Properties:
+          Text: ="Applicant Gender:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =126.69
+          X: =82.46
+          Y: =128
+    - LabelLagos_ReqForm2_DateOfRqName:
+        Control: Label
+        Properties:
+          Text: ="Date of request:"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =126.69
+          X: =628.19
+          Y: =126
+    - LabelLagos_ReqForm2_infoDetHead:
+        Control: Label
+        Properties:
+          Text: ="Invoice Detail"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          Height: =25
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =197.15
+          X: =413.80
+          Y: =74
+    - formLagos_ReqForm2_HdTtle:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+
+
+            MIGRATION HEALTH ASSESSMENT CENTRE, NIGERIA"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =70
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =1022.49
+          X: =0.00
+          Y: =4
+    - ImageLagos_ReqForm2_backArrow:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =69.72
+          X: =69.72
+          Y: =4

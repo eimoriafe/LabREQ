@@ -1,0 +1,3336 @@
+- LabAbuja_ReqForm4_ApprovalPage:
+    Control: Screen
+    Properties:
+      Fill: =
+    Children:
+    - TextCanvas1:
+        Control: Text
+        Properties:
+          FontColor: =RGBA(255, 255, 255, 1)
+          Size: =26.24
+          Text: ="LabREQ"&Char(174)
+          Weight: ='TextCanvas.Weight'.Bold
+          Height: =57
+          Width: =121.44
+          X: =471.52
+          Y: =10
+    - Form1_5:
+        Control: Form
+        Layout: vertical
+        Properties:
+          DataSource: =NGAbj_LabReq_ApprovalFlow_Db
+          Item: =LookUp(NGAbj_LabReq_ApprovalFlow_Db, InvoiceRef_ID = GalleryAbj.Selected.InvoiceRef_ID)
+          BorderThickness: =3
+          Fill: =RGBA(40, 134, 222, 1)
+          Height: =95
+          Width: =577.22
+          X: =329.84
+          Y: =120
+        Children:
+        - Dateofreq_DataCard3_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_0"
+              Default: =ThisItem.DateofReqLagApp
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,DateofReqLagApp)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, DateofReqLagApp)
+              Update: =DataCardValue1_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+            Children:
+            - StarVisible42_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey42_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey42_2.Y
+            - ErrorMessage42_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue1_2.Y + DataCardValue1_2.Height
+            - DataCardValue1_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey42_2.Y + DataCardKey42_2.Height + 5
+            - DataCardKey42_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Color: =RGBA(255, 255, 255, 1)
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - InvoiceRef_ID_DataCard3_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_2"
+              Default: =ThisItem.InvoiceRef_ID
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,InvoiceRef_ID)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, InvoiceRef_ID)
+              Update: =DataCardValue45.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =1
+            Children:
+            - StarVisible43_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey43_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey43_2.Y
+            - ErrorMessage43_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue45.Y + DataCardValue45.Height
+            - DataCardValue45:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey43_2.Y + DataCardKey43_2.Height + 5
+            - DataCardKey43_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Color: =RGBA(255, 255, 255, 1)
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - reqDoctor_DataCard3_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_18"
+              Default: =ThisItem.reqDoctor
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,reqDoctor)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, reqDoctor)
+              Update: =DataCardValue4_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =2
+            Children:
+            - StarVisible45_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey45_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey45_2.Y
+            - ErrorMessage45_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue4_2.Y + DataCardValue4_2.Height
+            - DataCardValue4_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey45_2.Y + DataCardKey45_2.Height + 5
+            - DataCardKey45_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Color: =RGBA(255, 255, 255, 1)
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - Approval_Stat_DataCard1_2:
+            Control: TypedDataCard
+            Variant: comboBoxEditCard
+            Properties:
+              DataField: ="Approval_Stat"
+              Default: =ThisItem.Approval_Stat
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,Approval_Stat)
+              Update: =DataCardValue38.Selected
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              Y: =1
+            Children:
+            - StarVisible44_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey44_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey44_2.Y
+            - ErrorMessage44_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue38.Y + DataCardValue38.Height
+            - DataCardValue38:
+                Control: Classic/ComboBox
+                Properties:
+                  DefaultSelectedItems: =Parent.Default
+                  DisplayFields: =["Value"]
+                  Items: =Choices([@NGLag_LabReq_ApprovalFlow_Db].Approval_Stat)
+                  SearchFields: =["Value"]
+                  SelectMultiple: =false
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey44_2.Y + DataCardKey44_2.Height + 5
+            - DataCardKey44_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - FinanceConfm_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="FinanceApproval"
+              Default: =ThisItem.FinanceConfm
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,FinanceConfm)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, FinanceConfm)
+              Update: =DataCardValue27_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =1
+              Y: =1
+            Children:
+            - StarVisible10_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey10_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey10_2.Y
+            - ErrorMessage10_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue27_2.Y + DataCardValue27_2.Height
+            - DataCardValue27_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey10_2.Y + DataCardKey10_2.Height + 5
+            - DataCardKey10_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - LabApproval_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="LabApproval"
+              Default: =ThisItem.LabApproval
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,LabApproval)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, LabApproval)
+              Update: =DataCardValue28_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =2
+              Y: =1
+            Children:
+            - StarVisible12_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey12_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey12_2.Y
+            - ErrorMessage12_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue28_2.Y + DataCardValue28_2.Height
+            - DataCardValue28_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey12_2.Y + DataCardKey12_2.Height + 5
+            - DataCardKey12_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - DateFinanceCfm_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="DateFinanceCfm"
+              Default: =ThisItem.DateFinanceCfm
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,DateFinanceCfm)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, DateFinanceCfm)
+              Update: =DataCardValue29_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              Y: =2
+            Children:
+            - StarVisible13_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey13_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey13_2.Y
+            - ErrorMessage13_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue29_2.Y + DataCardValue29_2.Height
+            - DataCardValue29_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey13_2.Y + DataCardKey13_2.Height + 5
+            - DataCardKey13_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - DateLabApp_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="DateLabApp"
+              Default: =ThisItem.DateLabApp
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,DateLabApp)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, DateLabApp)
+              Update: =DataCardValue30_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =1
+              Y: =2
+            Children:
+            - StarVisible14_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey14_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey14_2.Y
+            - ErrorMessage14_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue30_2.Y + DataCardValue30_2.Height
+            - DataCardValue30_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey14_2.Y + DataCardKey14_2.Height + 5
+            - DataCardKey14_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - DateReview_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="ReviewDate"
+              Default: =ThisItem.DateReview
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,DateReview)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, DateReview)
+              Update: =DataCardValue31_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =2
+              Y: =2
+            Children:
+            - StarVisible15_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey15_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey15_2.Y
+            - ErrorMessage15_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue31_2.Y + DataCardValue31_2.Height
+            - DataCardValue31_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey15_2.Y + DataCardKey15_2.Height + 5
+            - DataCardKey15_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - ReviewStartTime_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="Review_Commenced"
+              Default: =ThisItem.ReviewStartTime
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,ReviewStartTime)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, ReviewStartTime)
+              Update: =DataCardValue32_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              Y: =3
+            Children:
+            - StarVisible16_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey16_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey16_2.Y
+            - ErrorMessage16_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue32_2.Y + DataCardValue32_2.Height
+            - DataCardValue32_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey16_2.Y + DataCardKey16_2.Height + 5
+            - DataCardKey16_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - TimeofApproval_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="TmeofApproval"
+              Default: =ThisItem.TimeofApproval
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,TimeofApproval)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, TimeofApproval)
+              Update: =DataCardValue33_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =1
+              Y: =3
+            Children:
+            - StarVisible17_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey17_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey17_2.Y
+            - ErrorMessage17_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue33_2.Y + DataCardValue33_2.Height
+            - DataCardValue33_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey17_2.Y + DataCardKey17_2.Height + 5
+            - DataCardKey17_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - TimeOfPaymentConfrm_DataCard1_2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="TimeOfPaymentConfrm"
+              Default: =ThisItem.TimeOfPaymentConfrm
+              DisplayName: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db],DataSourceInfo.DisplayName,TimeOfPaymentConfrm)
+              MaxLength: =DataSourceInfo([@NGLag_LabReq_ApprovalFlow_Db], DataSourceInfo.MaxLength, TimeOfPaymentConfrm)
+              Update: =DataCardValue34_2.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =191
+              X: =2
+              Y: =3
+            Children:
+            - StarVisible18_2:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey18_2.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey18_2.Y
+            - ErrorMessage18_2:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardValue34_2.Y + DataCardValue34_2.Height
+            - DataCardValue34_2:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =146.18
+                  X: =22.49
+                  Y: =DataCardKey18_2.Y + DataCardKey18_2.Height + 5
+            - DataCardKey18_2:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =146.18
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+    - Label2_4:
+        Control: Label
+        Properties:
+          Text: ="Laboratory Review"
+          Align: =Align.Center
+          FontWeight: =FontWeight.Bold
+          Height: =28
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =127.44
+          X: =560.73
+          Y: =465
+    - Label2_3:
+        Control: Label
+        Properties:
+          Text: ="Finance Review"
+          Align: =Align.Center
+          FontWeight: =FontWeight.Bold
+          Height: =30
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =127.44
+          X: =560.73
+          Y: =318
+    - Label1:
+        Control: Label
+        Properties:
+          Text: ="Abuja"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(15, 108, 189, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =31
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =112.45
+          X: =457.28
+          Y: =79
+    - formHeader_PseahCall_23:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+            "
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =927.30
+          X: =96.70
+          Y: =725
+    - formHeader_PseahCall_22:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =6.00
+          Width: =107.20
+          X: =0.75
+          Y: =725
+    - Form1_3:
+        Control: Form
+        Layout: vertical
+        Properties:
+          DataSource: =NGAbj_AddLabTest_BackendDb
+          Item: =LookUp(NGAbj_AddLabTest_BackendDb, InvoiceRef_ID = GalleryAbj.Selected.InvoiceRef_ID)
+          Height: =68
+          Visible: =false
+          Width: =261.62
+          X: =68.22
+          Y: =610
+        Children:
+        - Applicant_Gender_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_2"
+              Default: =ThisItem.Applicant_Gender
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,Applicant_Gender)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, Applicant_Gender)
+              Update: =DataCardValue48.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+            Children:
+            - StarVisible48:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey48.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey48.Y
+            - ErrorMessage48:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue48.Y + DataCardValue48.Height
+            - DataCardValue48:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey48.Y + DataCardKey48.Height + 5
+            - DataCardKey48:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - Applica_dob_DataCard2:
+            Control: TypedDataCard
+            Variant: dateEditCard
+            Properties:
+              DataField: ="field_3"
+              Default: =ThisItem.Applica_dob
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,Applica_dob)
+              Update: =DataCardValue49.SelectedDate
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =1
+            Children:
+            - StarVisible49:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey49.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey49.Y
+            - ErrorMessage49:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue49.Y + DataCardValue49.Height
+            - DataCardValue49:
+                Control: Classic/DatePicker
+                Properties:
+                  DefaultDate: =Parent.Default
+                  EndYear: =Year(Today())+100
+                  StartYear: =1899
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  IsEditable: =true
+                  PaddingBottom: =0
+                  PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                  PaddingRight: =3.75
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey49.Y + DataCardKey49.Height + 5
+            - DataCardKey49:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - add_Test1_name_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_6"
+              Default: =ThisItem.add_Test1_name
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,add_Test1_name)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, add_Test1_name)
+              Update: =DataCardValue50.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =2
+            Children:
+            - StarVisible50:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey50.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey50.Y
+            - ErrorMessage50:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue50.Y + DataCardValue50.Height
+            - DataCardValue50:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey50.Y + DataCardKey50.Height + 5
+            - DataCardKey50:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - AmountTest_1_DataCard2:
+            Control: TypedDataCard
+            Variant: numberEditCard
+            Properties:
+              DataField: ="field_11"
+              Default: =ThisItem.AmountTest_1
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,AmountTest_1)
+              Update: =Value(DataCardValue51.Text)
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              Y: =1
+            Children:
+            - StarVisible51:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey51.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey51.Y
+            - ErrorMessage51:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue51.Y + DataCardValue51.Height
+            - DataCardValue51:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  Format: =TextFormat.Number
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey51.Y + DataCardKey51.Height + 5
+            - DataCardKey51:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - Dateofreq_DataCard4:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_14"
+              Default: =ThisItem.DateofReqAbjDB
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,DateofReqAbjDB)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, DateofReqAbjDB)
+              Update: =DataCardValue52.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =1
+              Y: =1
+            Children:
+            - StarVisible52:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey52.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey52.Y
+            - ErrorMessage52:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue52.Y + DataCardValue52.Height
+            - DataCardValue52:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey52.Y + DataCardKey52.Height + 5
+            - DataCardKey52:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - TotalUSDAmount_DataCard3:
+            Control: TypedDataCard
+            Variant: numberEditCard
+            Properties:
+              DataField: ="field_17"
+              Default: =ThisItem.TotalUSDAmount
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,TotalUSDAmount)
+              Update: =Value(DataCardValue53.Text)
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =2
+              Y: =1
+            Children:
+            - StarVisible53:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey53.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey53.Y
+            - ErrorMessage53:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue53.Y + DataCardValue53.Height
+            - DataCardValue53:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  Format: =TextFormat.Number
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey53.Y + DataCardKey53.Height + 5
+            - DataCardKey53:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - TotalNairaAmount_DataCard2:
+            Control: TypedDataCard
+            Variant: numberEditCard
+            Properties:
+              DataField: ="field_18"
+              Default: =ThisItem.TotalNairaAmount
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,TotalNairaAmount)
+              Update: =Value(DataCardValue54.Text)
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              Y: =2
+            Children:
+            - StarVisible54:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey54.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey54.Y
+            - ErrorMessage54:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue54.Y + DataCardValue54.Height
+            - DataCardValue54:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  Format: =TextFormat.Number
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey54.Y + DataCardKey54.Height + 5
+            - DataCardKey54:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - reqDoctor_DataCard4:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_19"
+              Default: =ThisItem.reqDoctor
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,reqDoctor)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, reqDoctor)
+              Update: =DataCardValue55.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =1
+              Y: =2
+            Children:
+            - StarVisible55:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey55.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey55.Y
+            - ErrorMessage55:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue55.Y + DataCardValue55.Height
+            - DataCardValue55:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey55.Y + DataCardKey55.Height + 5
+            - DataCardKey55:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - Approvl_labDb_stt_DataCard2:
+            Control: TypedDataCard
+            Variant: comboBoxEditCard
+            Properties:
+              DataField: ="Approvl_labSt"
+              Default: =ThisItem.Approvl_labDb_stt
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,Approvl_labDb_stt)
+              Update: =DataCardValue56.Selected
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =2
+              Y: =2
+            Children:
+            - StarVisible56:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey56.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey56.Y
+            - ErrorMessage56:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue56.Y + DataCardValue56.Height
+            - DataCardValue56:
+                Control: Classic/ComboBox
+                Properties:
+                  DefaultSelectedItems: =Parent.Default
+                  DisplayFields: =["Value"]
+                  Items: =Choices([@NGAbj_AddLabTest_BackendDb].Approvl_labDb_stt)
+                  SearchFields: =["Value"]
+                  SelectMultiple: =false
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey56.Y + DataCardKey56.Height + 5
+            - DataCardKey56:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - Title_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="Title"
+              Default: =ThisItem.Title
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,Title)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, Title)
+              Required: =true
+              Update: =DataCardValue57.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              Y: =3
+            Children:
+            - StarVisible57:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey57.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey57.Y
+            - ErrorMessage57:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue57.Y + DataCardValue57.Height
+            - DataCardValue57:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey57.Y + DataCardKey57.Height + 5
+            - DataCardKey57:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - mimosa_id_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_4"
+              Default: =ThisItem.mimosa_id
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,mimosa_id)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, mimosa_id)
+              Required: =true
+              Update: =DataCardValue58.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =1
+              Y: =3
+            Children:
+            - StarVisible58:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey58.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey58.Y
+            - ErrorMessage58:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue58.Y + DataCardValue58.Height
+            - DataCardValue58:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey58.Y + DataCardKey58.Height + 5
+            - DataCardKey58:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - MissionRate_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="MissionRate"
+              Default: =ThisItem.MissionRate
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,MissionRate)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, MissionRate)
+              Update: =DataCardValue37.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+            Children:
+            - StarVisible21:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey21.Height
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =30
+                  Wrap: =false
+                  Y: =DataCardKey21.Y
+            - ErrorMessage21:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardValue37.Y + DataCardValue37.Height
+            - DataCardValue37:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardKey21.Y + DataCardKey21.Height + 5
+            - DataCardKey21:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  Width: =Parent.Width - 60
+                  Wrap: =false
+                  X: =30
+                  Y: =10
+        - FirstName_DataCard1:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="FirstName"
+              Default: =ThisItem.FirstName
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,FirstName)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, FirstName)
+              Required: =true
+              Update: =DataCardValue70.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+            Children:
+            - StarVisible40:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey40.Height
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =30
+                  Wrap: =false
+                  Y: =DataCardKey40.Y
+            - ErrorMessage40:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardValue70.Y + DataCardValue70.Height
+            - DataCardValue70:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardKey40.Y + DataCardKey40.Height + 5
+            - DataCardKey40:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  Width: =Parent.Width - 60
+                  Wrap: =false
+                  X: =30
+                  Y: =10
+        - Surname_DataCard1:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="Surname"
+              Default: =ThisItem.Surname
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,Surname)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, Surname)
+              Required: =true
+              Update: =DataCardValue71.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+            Children:
+            - StarVisible41:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey41.Height
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =30
+                  Wrap: =false
+                  Y: =DataCardKey41.Y
+            - ErrorMessage41:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardValue71.Y + DataCardValue71.Height
+            - DataCardValue71:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardKey41.Y + DataCardKey41.Height + 5
+            - DataCardKey41:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  Width: =Parent.Width - 60
+                  Wrap: =false
+                  X: =30
+                  Y: =10
+        - Applica_dob_DataCard3:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_3"
+              Default: =ThisItem.Applica_dob
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,Applica_dob)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, Applica_dob)
+              Update: =DataCardValue72.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+            Children:
+            - StarVisible70:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey70.Height
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =30
+                  Wrap: =false
+                  Y: =DataCardKey70.Y
+            - ErrorMessage70:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardValue72.Y + DataCardValue72.Height
+            - DataCardValue72:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width - 60
+                  X: =30
+                  Y: =DataCardKey70.Y + DataCardKey70.Height + 5
+            - DataCardKey70:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  Width: =Parent.Width - 60
+                  Wrap: =false
+                  X: =30
+                  Y: =10
+        - add_Test2_Name_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_7"
+              Default: =ThisItem.add_Test2_Name
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,add_Test2_Name)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, add_Test2_Name)
+              Update: =DataCardValue59.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =2
+              Y: =3
+            Children:
+            - StarVisible59:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey59.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey59.Y
+            - ErrorMessage59:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue59.Y + DataCardValue59.Height
+            - DataCardValue59:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey59.Y + DataCardKey59.Height + 5
+            - DataCardKey59:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - add_Test3_Name_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_8"
+              Default: =ThisItem.add_Test3_Name
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,add_Test3_Name)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, add_Test3_Name)
+              Update: =DataCardValue60.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              Y: =4
+            Children:
+            - StarVisible60:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey60.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey60.Y
+            - ErrorMessage60:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue60.Y + DataCardValue60.Height
+            - DataCardValue60:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey60.Y + DataCardKey60.Height + 5
+            - DataCardKey60:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - add_Test4_Name_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_9"
+              Default: =ThisItem.add_Test4_Name
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,add_Test4_Name)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, add_Test4_Name)
+              Update: =DataCardValue61.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =1
+              Y: =4
+            Children:
+            - StarVisible61:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey61.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey61.Y
+            - ErrorMessage61:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue61.Y + DataCardValue61.Height
+            - DataCardValue61:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey61.Y + DataCardKey61.Height + 5
+            - DataCardKey61:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - add_Test5_Name_DataCard1:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_10"
+              Default: =ThisItem.add_Test5_Name
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,add_Test5_Name)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, add_Test5_Name)
+              Update: =DataCardValue62.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =2
+              Y: =4
+            Children:
+            - StarVisible62:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey62.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey62.Y
+            - ErrorMessage62:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue62.Y + DataCardValue62.Height
+            - DataCardValue62:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey62.Y + DataCardKey62.Height + 5
+            - DataCardKey62:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - AmountTest_2_DataCard2:
+            Control: TypedDataCard
+            Variant: numberEditCard
+            Properties:
+              DataField: ="field_12"
+              Default: =ThisItem.AmountTest_2
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,AmountTest_2)
+              Update: =Value(DataCardValue63.Text)
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              Y: =5
+            Children:
+            - StarVisible63:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey63.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey63.Y
+            - ErrorMessage63:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue63.Y + DataCardValue63.Height
+            - DataCardValue63:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  Format: =TextFormat.Number
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey63.Y + DataCardKey63.Height + 5
+            - DataCardKey63:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - AmountTest_3_DataCard2:
+            Control: TypedDataCard
+            Variant: numberEditCard
+            Properties:
+              DataField: ="field_13"
+              Default: =ThisItem.AmountTest_3
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,AmountTest_3)
+              Update: =Value(DataCardValue64.Text)
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =1
+              Y: =5
+            Children:
+            - StarVisible64:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey64.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey64.Y
+            - ErrorMessage64:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue64.Y + DataCardValue64.Height
+            - DataCardValue64:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  Format: =TextFormat.Number
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey64.Y + DataCardKey64.Height + 5
+            - DataCardKey64:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - AmountTest_4_DataCard1:
+            Control: TypedDataCard
+            Variant: numberEditCard
+            Properties:
+              DataField: ="field_15"
+              Default: =ThisItem.AmountTest_4
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,AmountTest_4)
+              Update: =Value(DataCardValue65.Text)
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =2
+              Y: =5
+            Children:
+            - StarVisible65:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey65.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey65.Y
+            - ErrorMessage65:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue65.Y + DataCardValue65.Height
+            - DataCardValue65:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  Format: =TextFormat.Number
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey65.Y + DataCardKey65.Height + 5
+            - DataCardKey65:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - AmountTest_5_DataCard2:
+            Control: TypedDataCard
+            Variant: numberEditCard
+            Properties:
+              DataField: ="field_16"
+              Default: =ThisItem.AmountTest_5
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,AmountTest_5)
+              Update: =Value(DataCardValue66.Text)
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              Y: =6
+            Children:
+            - StarVisible66:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey66.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey66.Y
+            - ErrorMessage66:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue66.Y + DataCardValue66.Height
+            - DataCardValue66:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  Format: =TextFormat.Number
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey66.Y + DataCardKey66.Height + 5
+            - DataCardKey66:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - dest_country_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_5"
+              Default: =ThisItem.dest_country
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,dest_country)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, dest_country)
+              Update: =DataCardValue67.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =1
+              Y: =6
+            Children:
+            - StarVisible67:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey67.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey67.Y
+            - ErrorMessage67:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue67.Y + DataCardValue67.Height
+            - DataCardValue67:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey67.Y + DataCardKey67.Height + 5
+            - DataCardKey67:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - InvoiceRef_ID_DataCard4:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_0"
+              Default: =ThisItem.InvoiceRef_ID
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,InvoiceRef_ID)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, InvoiceRef_ID)
+              Update: =DataCardValue68.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              X: =2
+              Y: =6
+            Children:
+            - StarVisible68:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey68.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey68.Y
+            - ErrorMessage68:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue68.Y + DataCardValue68.Height
+            - DataCardValue68:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey68.Y + DataCardKey68.Height + 5
+            - DataCardKey68:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+        - timeofEntry_DataCard2:
+            Control: TypedDataCard
+            Variant: textualEditCard
+            Properties:
+              DataField: ="field_1"
+              Default: =ThisItem.timeofEntry
+              DisplayName: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb],DataSourceInfo.DisplayName,timeofEntry)
+              MaxLength: =DataSourceInfo([@NGAbj_AddLabTest_BackendDb], DataSourceInfo.MaxLength, timeofEntry)
+              Update: =DataCardValue69.Text
+              DisplayMode: =Parent.DisplayMode
+              Height: =50
+              Width: =87
+              Y: =7
+            Children:
+            - StarVisible69:
+                Control: Label
+                Properties:
+                  Text: ="*"
+                  Align: =Align.Center
+                  Height: =DataCardKey69.Height
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                  Width: =22.49
+                  Wrap: =false
+                  X: =0.00
+                  Y: =DataCardKey69.Y
+            - ErrorMessage69:
+                Control: Label
+                Properties:
+                  Live: =Live.Assertive
+                  Text: =Parent.Error
+                  AutoHeight: =true
+                  Height: =10
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0.00
+                  PaddingTop: =0.00
+                  Size: =10.49
+                  Visible: =Parent.DisplayMode=DisplayMode.Edit
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardValue69.Y + DataCardValue69.Height
+            - DataCardValue69:
+                Control: Classic/TextInput
+                Properties:
+                  Default: =Parent.Default
+                  DelayOutput: =true
+                  MaxLength: =Parent.MaxLength
+                  Tooltip: =Parent.DisplayName
+                  BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                  DisplayMode: =Parent.DisplayMode
+                  PaddingLeft: =5
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =9.75
+                  Width: =41.98
+                  X: =22.49
+                  Y: =DataCardKey69.Y + DataCardKey69.Height + 5
+            - DataCardKey69:
+                Control: Label
+                Properties:
+                  Text: =Parent.DisplayName
+                  AutoHeight: =true
+                  Height: =34
+                  PaddingRight: =3.75
+                  PaddingTop: =3.75
+                  Size: =9.75
+                  Width: =41.98
+                  Wrap: =false
+                  X: =22.49
+                  Y: =10
+    - ButtonCanvas2_11:
+        Control: Button
+        Properties:
+          OnSelect: "=If(LookUp(NG_UserRole_LabREQ, UserID = User().Email, UserRole in [\"Lab\",\"Admin\",\"Management\"]),\r\nPatch(\r\n    NGAbj_LabReq_ApprovalFlow_Db,\r\n    LookUp(NGAbj_LabReq_ApprovalFlow_Db, InvoiceRef_ID = DataCardValue45.Text),\r\n    {\r\n        Approval_Stat: {Value: \"Specimen not collected\"}, //Approve test\r\n        TimeofApproval: Text(Now(), \"hh:mm AM/PM\"),\r\n        DateLabApp:Text(Now(), \"dd-mmm-yyyy\"),\r\n        LabApproval: User().FullName\r\n    } \r\n);\r\nPatch(\r\n    NGAbj_AddLabTest_BackendDb,\r\n    LookUp(NGAbj_AddLabTest_BackendDb, InvoiceRef_ID = DataCardValue45.Text),\r\n    {\r\n        Approvl_labDb_stt: {Value: \"Specimen not collected\"} //Confirm payment\r\n    } \r\n    \r\n),\r\nNotify(\"You are not authorized to perform this action.\", NotificationType.Error)\r\n)"
+          FontSize: =15
+          Text: ="Confirm here (If specimen is not collected)"
+          DisplayMode: =If(DataCardValue38.Selected.Value in ["Payment not seen","Payment Confirmed"], DisplayMode.Edit, DisplayMode.Disabled)
+          Height: =50
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Lab","Management"] ),
+                true,    false
+            )
+          Width: =275.87
+          X: =633.44
+          Y: =512
+    - ButtonCanvas2_10:
+        Control: Button
+        Properties:
+          OnSelect: |
+            =If(LookUp(NG_UserRole_LabREQ, UserID = User().Email, UserRole in ["Lab","Admin","Management"]),
+            Patch(
+                NGAbj_LabReq_ApprovalFlow_Db,
+                LookUp(
+                    NGAbj_LabReq_ApprovalFlow_Db,
+                    InvoiceRef_ID = DataCardValue45.Text
+                ),
+                {
+                    Approval_Stat: {Value: "Specimen collected"},
+                    //Approve test
+                    TimeofApproval: Text(Now(), "hh:mm AM/PM"),
+                    DateLabApp: Text(Now(), "dd-mmm-yyyy"),
+                    LabApproval: User().FullName
+                }
+            );
+            Patch(
+                NGAbj_AddLabTest_BackendDb,
+                LookUp(
+                    NGAbj_AddLabTest_BackendDb,
+                    InvoiceRef_ID = DataCardValue45.Text
+                ),
+                {Approvl_labDb_stt: {Value: "Specimen collected"}//Confirm payment
+            }
+            ),
+            Notify("You are not authorized to perform this action.", NotificationType.Error)
+            )
+          FontSize: =15
+          Text: ="Confirm here (If collecting specimen)"
+          DisplayMode: =If(DataCardValue38.Selected.Value in ["Payment not seen","Payment Confirmed"], DisplayMode.Edit, DisplayMode.Disabled)
+          Height: =50
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Lab","Management"] ),
+                true,    false
+            )
+          Width: =263.12
+          X: =329.84
+          Y: =512
+    - ButtonCanvas2_9:
+        Control: Button
+        Properties:
+          OnSelect: "=If(LookUp(NG_UserRole_LabREQ, UserID = User().Email, UserRole in [\"Finance\",\"Admin\",\"Management\",\"Forex Manager\"]),\r\nPatch(\r\n    NGAbj_LabReq_ApprovalFlow_Db,\r\n    LookUp(NGAbj_LabReq_ApprovalFlow_Db, InvoiceRef_ID = DataCardValue45.Text),\r\n    {\r\n        Approval_Stat: {Value: \"Payment not seen\"}, //Confirm payment\r\n        TimeOfPaymentConfrm: Text(Now(), \"hh:mm AM/PM\"),\r\n        DateFinanceCfm: Text(Now(),\"dd-mmm-yyyy\"),\r\n        FinanceConfm: User().FullName\r\n    } \r\n    \r\n);\r\nPatch(\r\n    NGAbj_AddLabTest_BackendDb,\r\n    LookUp(NGAbj_AddLabTest_BackendDb, InvoiceRef_ID = DataCardValue45.Text),\r\n    {\r\n        Approvl_labDb_stt: {Value: \"Payment not seen\"} //Confirm payment\r\n    } \r\n    \r\n),\r\nNotify(\"You are not authorized to perform this action.\", NotificationType.Error)\r\n)"
+          FontSize: =15
+          Text: ="Reject Payment"
+          DisplayMode: =If(DataCardValue38.Selected.Value = "Under review",DisplayMode.Edit, DisplayMode.Disabled)
+          Height: =46
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Finance","Forex Manager","Management"] ),
+                true,    false
+            )
+          Width: =185.91
+          X: =723.40
+          Y: =355
+    - ButtonCanvas2_8:
+        Control: Button
+        Properties:
+          OnSelect: "=If(LookUp(NG_UserRole_LabREQ, UserID = User().Email, UserRole in [\"Finance\",\"Admin\",\"Management\",\"Forex Manager\"]),\r\nPatch(\r\n    NGAbj_LabReq_ApprovalFlow_Db,\r\n    LookUp(NGAbj_LabReq_ApprovalFlow_Db, InvoiceRef_ID = DataCardValue45.Text),\r\n    {\r\n        Approval_Stat: {Value: \"Payment Confirmed\"}, //Confirm payment\r\n        TimeOfPaymentConfrm: Text(Now(), \"hh:mm AM/PM\"),\r\n        DateFinanceCfm: Text(Now(),\"dd-mmm-yyyy\"),\r\n        FinanceConfm: User().FullName\r\n    } \r\n    \r\n);\r\nPatch(\r\n    NGAbj_AddLabTest_BackendDb,\r\n    LookUp(NGAbj_AddLabTest_BackendDb, InvoiceRef_ID = DataCardValue45.Text),\r\n    {\r\n        Approvl_labDb_stt: {Value: \"Payment Confirmed\"} //Confirm payment\r\n    } \r\n    \r\n),\r\nNotify(\"You are not authorized to perform this action.\", NotificationType.Error)\r\n)"
+          FontSize: =15
+          Text: ="Confirm payment"
+          DisplayMode: =If(DataCardValue38.Selected.Value = "Under review", DisplayMode.Edit,DisplayMode.Disabled)
+          Height: =46
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Finance","Forex Manager","Management"] ),
+                true,    false
+            )
+          Width: =172.42
+          X: =534.49
+          Y: =355
+    - ButtonCanvas2_7:
+        Control: Button
+        Properties:
+          OnSelect: |-
+            =If(LookUp(NG_UserRole_LabREQ, UserID = User().Email, UserRole in ["Finance","Admin","Management","Forex Manager"]),
+                Patch(
+                    NGAbj_AddLabTest_BackendDb,
+                    LookUp(
+                        NGAbj_AddLabTest_BackendDb,
+                        InvoiceRef_ID = DataCardValue45.Text),
+                    {
+                        Approvl_labDb_stt: {Value: "Under review"}
+                    }
+                );
+                Patch(
+                    NGAbj_LabReq_ApprovalFlow_Db,
+                    LookUp(
+                        NGAbj_LabReq_ApprovalFlow_Db,
+                        InvoiceRef_ID = DataCardValue45.Text),
+                    {
+                        Approval_Stat: {Value: "Under review"},
+                        ReviewStartTime: Text(Now(), "hh:mm AM/PM"),
+                        DateReview: Text(Now(),"dd-mmm-yyyy")
+                    }
+                ),
+                Notify("You are not authorized to perform this action.", NotificationType.Error)
+            )
+          FontSize: =15
+          Text: ="Review"
+          DisplayMode: =If(DataCardValue38.Selected.Value = "New",DisplayMode.Edit, DisplayMode.Disabled)
+          Height: =46
+          Visible: |-
+            =If(
+                LookUp(
+                    NG_UserRole_LabREQ,
+                    UserID = User().Email,
+                    UserRole in ["Admin", "Finance","Forex Manager","Management"] ),
+                true,    false
+            )
+          Width: =188.16
+          X: =330.59
+          Y: =357
+    - ButtonCanvas2_6:
+        Control: Button
+        Properties:
+          OnSelect: =Navigate(LabAbuja_ReqForm6_InvDet_ApprvPage,ScreenTransition.None)
+          FontSize: =20
+          Text: ="Click here to see complete detail of the selected invoice"
+          DisplayMode: =
+          Height: =46
+          Width: =579.47
+          X: =329.84
+          Y: =229
+    - Icon3_3:
+        Control: Classic/Icon
+        Variant: Print
+        Properties:
+          OnSelect: |-
+            =
+            Print()
+          Color: =RGBA(255, 255, 255, 1)
+          Height: =45
+          Icon: =Icon.Print
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =32.98
+          X: =827.60
+          Y: =22
+    - IconCloseReceipt_5:
+        Control: Classic/Icon
+        Variant: Cancel
+        Properties:
+          OnSelect: =Navigate(Welcome_ReqForm2_SubOffice4Apprv, ScreenTransition.None);
+          AccessibleLabel: ="closeReceipt"
+          Color: =RGBA(255, 255, 255, 1)
+          Height: =60
+          Icon: =Icon.BackArrow
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          TabIndex: =0
+          Width: =45.73
+          X: =82.46
+          Y: =14
+    - Image1_11:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =123.69
+          X: =899.56
+          Y: =5
+    - formHeader_12:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+
+
+                    MIGRATION HEALTH ASSESSMENT CENTRE, NIGERIA"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =69
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =6.75
+          Width: =1022.49
+          X: =0.00
+          Y: =10
+    - Image_IomLogo_10:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =139.51
+          X: =0.91
+          Y: =4
+    - GalleryAbj:
+        Control: Gallery
+        Variant: BrowseLayout_Vertical_ThreeTextVariant_ver5.0
+        Properties:
+          Items: =NGAbj_LabReq_ApprovalFlow_Db
+          BorderThickness: =3
+          DelayItemLoading: =true
+          Height: =472
+          Layout: =Layout.Vertical
+          LoadingSpinner: =LoadingSpinner.Data
+          TemplatePadding: =0
+          TemplateSize: =85
+          Transition: =Transition.Pop
+          Width: =251.13
+          X: =68.22
+          Y: =120
+        Children:
+        - Rectangle1:
+            Control: Rectangle
+            Properties:
+              OnSelect: =Select(Parent)
+              Height: =Parent.TemplateHeight - Separator1.Height
+              Visible: =ThisItem.IsSelected
+              Width: =3.00
+              X: =0.00
+        - Separator1:
+            Control: Rectangle
+            Properties:
+              OnSelect: =Select(Parent)
+              Fill: =RGBA(255, 255, 255, 1)
+              Height: =8
+              Width: =251.13
+              X: =0.00
+              Y: =Parent.TemplateHeight - Self.Height
+        - NextArrow1:
+            Control: Classic/Icon
+            Variant: ChevronRight
+            Properties:
+              OnSelect: =Select(Parent)
+              AccessibleLabel: =Self.Tooltip
+              Tooltip: ="View item details"
+              Color: =RGBA(255, 255, 255, 1)
+              Fill: =RGBA(40, 134, 222, 1)
+              Height: =70
+              Icon: =Icon.ArrowRight
+              PaddingBottom: =16
+              PaddingLeft: =16
+              PaddingRight: =11.99
+              PaddingTop: =11.99
+              Width: =41.98
+              X: =192.66
+              Y: =13
+        - Body1:
+            Control: Label
+            Properties:
+              OnSelect: =Select(Parent)
+              Text: =ThisItem.DateofReqLagApp
+              Align: =Align.Center
+              Color: =RGBA(255, 255, 255, 1)
+              Fill: =RGBA(40, 134, 222, 1)
+              FontWeight: =FontWeight.Bold
+              Height: =21
+              PaddingBottom: =0
+              PaddingLeft: =0
+              PaddingRight: =0.00
+              PaddingTop: =0.00
+              Size: =9.00
+              VerticalAlign: =VerticalAlign.Top
+              Width: =186.66
+              X: =11.99
+              Y: =Subtitle1.Y + Subtitle1.Height
+        - Subtitle1:
+            Control: Label
+            Properties:
+              OnSelect: =Select(Parent)
+              Text: =ThisItem.Approval_Stat.Value
+              Align: =Align.Center
+              Color: |-
+                =If(Subtitle1.Text = "New", RGBA(10, 10, 10, 0.97),
+                    If(Subtitle1.Text = "Under review", RGBA(255, 255, 255, 1),
+                    If(Subtitle1.Text = "Payment Confirmed", RGBA(10, 10, 10, 0.97),
+                    If(Subtitle1.Text = "Payment not seen", RGBA(255, 255, 255, 1),
+                    If(Subtitle1.Text = "Test Approved", RGBA(255, 255, 255, 1),RGBA(255, 255, 255, 1)
+                     )))))
+              Fill: "=If(Subtitle1.Text = \"New\", RGBA(235, 240, 177, 0.8),\r\n    If(Subtitle1.Text = \"Under review\", RGBA(211, 158, 55, 0.8),\r\n    If(Subtitle1.Text = \"Payment Confirmed\", RGBA(241, 251, 65, 0.8),\r\n    If(Subtitle1.Text = \"Payment not seen\", RGBA(244, 48, 11, 0.8),\r\n    If(Subtitle1.Text = \"Specimen collected\", RGBA(15, 173, 39, 0.8),RGBA(173, 15, 53, 0.8)\r\n     )))))\r\n    \r\n    \r\n    "
+              FontWeight: =FontWeight.Bold
+              Height: =Self.Size * 1.8
+              PaddingBottom: =0
+              PaddingLeft: =0
+              PaddingRight: =0.00
+              PaddingTop: =0.00
+              Size: =9.00
+              VerticalAlign: =VerticalAlign.Top
+              Width: =186.66
+              X: =11.99
+              Y: =Title1.Y + Title1.Height
+        - Title1:
+            Control: Label
+            Properties:
+              OnSelect: =Select(Parent)
+              Text: =ThisItem.InvoiceRef_ID
+              Align: =Align.Center
+              Color: =RGBA(255, 255, 255, 1)
+              Fill: =RGBA(40, 134, 222, 1)
+              Font: =Font.'Lato Black'
+              FontWeight: =FontWeight.Bold
+              Height: =32
+              HoverColor: =
+              PaddingBottom: =0
+              PaddingLeft: =0
+              PaddingRight: =0.00
+              PaddingTop: =0.00
+              Size: =13.49
+              VerticalAlign: =VerticalAlign.Top
+              Width: =186.66
+              X: =11.99
+              Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle1.Size*1.8 + 2 + Body1.Size*1.8)) / 2

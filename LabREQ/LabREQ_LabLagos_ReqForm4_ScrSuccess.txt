@@ -1,0 +1,199 @@
+- LabLagos_ReqForm4_ScrSuccess:
+    Control: Screen
+    Properties:
+      Fill: =
+    Children:
+    - LabelAbj_ReqForm2_AppGendName_3:
+        Control: Label
+        Properties:
+          Text: ="Lagos SO"
+          Height: =24
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =126.69
+          X: =155
+          Y: =98
+    - TextCanvas1_3:
+        Control: Text
+        Properties:
+          FontColor: =RGBA(255, 255, 255, 1)
+          Size: =26.24
+          Text: ="LabREQ"&Char(174)
+          Weight: ='TextCanvas.Weight'.Bold
+          Height: =57
+          Width: =121.44
+          X: =449.78
+          Y: =4
+    - Icon3:
+        Control: Classic/Icon
+        Variant: Print
+        Properties:
+          OnSelect: =Print()
+          Color: =RGBA(255, 255, 255, 1)
+          Height: =45
+          Icon: =Icon.Print
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =32.98
+          X: =768.37
+          Y: =18
+    - Image1_3:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =123.69
+          X: =899.56
+          Y: =5
+    - Label_InvoiceRefLabel_6:
+        Control: Label
+        Properties:
+          Text: ="Invoice Ref No:"
+          Height: =22
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =107.20
+          X: =400.30
+          Y: =157
+    - Label_InvoiceRefLabel_5:
+        Control: Label
+        Properties:
+          Text: ="Test request with Invoice Ref number above has been sent to the Finance team for payment confirmation."
+          Align: =Align.Center
+          Height: =41
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =599.71
+          X: =201.65
+          Y: =545
+    - Label_InvoiceRefLabel_4:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Congratulations.
+            Your request has been submitted."
+          Align: =Align.Center
+          FontWeight: =FontWeight.Bold
+          Height: =71
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =11.24
+          Width: =279.61
+          X: =351.58
+          Y: =407
+    - Icon1:
+        Control: Classic/Icon
+        Variant: CheckBadge
+        Properties:
+          OnSelect: =
+          Height: =199
+          Icon: =Icon.CheckBadge
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =131.94
+          X: =412.30
+          Y: =207
+    - formHeader_PseahCall_6:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+            "
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =927.30
+          X: =96.70
+          Y: =725
+    - formHeader_PseahCall_7:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =6.00
+          Width: =107.20
+          X: =0.75
+          Y: =725
+    - Label_InvoiceRefNo_Value_2:
+        Control: Label
+        Properties:
+          Text: =unID
+          FontWeight: =FontWeight.Bold
+          Height: =22
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =106.45
+          X: =497.76
+          Y: =157
+    - IconCloseReceipt_2:
+        Control: Classic/Icon
+        Variant: Cancel
+        Properties:
+          OnSelect: |-
+            =Reset(TextInputLagos_ReqFm1_MimosaID);
+            Reset(DatePickerLagos_ReqFm1_AppDobVal);
+            Reset(ComboBoxLagos_ReqFm1_GenderVal);
+            Reset(ComboBoxLagos_ReqFm1_DestCoun);
+            Reset(ComboBoxLagos_ReqFm1_Test1Name);
+            Reset(ComboBoxLagos_ReqFm1_Test2Name);
+            Reset(ComboBoxLagos_ReqFm1_Test3Name);
+            Reset(ComboBoxLagos_ReqFm1_Test4Name);
+            Reset(ComboBoxLagos_ReqFm1_Test5Name);
+            Reset(ComboBoxLagos_ReqFm1_NofTests);
+            Navigate(LabLagos_ReqForm1, ScreenTransition.Fade);
+          AccessibleLabel: ="closeReceipt"
+          Color: =RGBA(255, 255, 255, 1)
+          Height: =47
+          Icon: =Icon.Home
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          TabIndex: =0
+          Width: =45.73
+          X: =155.92
+          Y: =16
+    - formHeader_4:
+        Control: Label
+        Properties:
+          Text: |-
+            ="
+
+
+            MIGRATION HEALTH ASSESSMENT CENTRE, NIGERIA"
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =69
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =7.50
+          Width: =1022.49
+          X: =0.00
+          Y: =5
+    - Image_IomLogo_2:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =69
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =139.51
+          X: =0.91
+          Y: =4

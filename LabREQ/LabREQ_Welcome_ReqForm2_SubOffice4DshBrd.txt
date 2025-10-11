@@ -1,0 +1,115 @@
+- Welcome_ReqForm2_SubOffice4DshBrd:
+    Control: Screen
+    Variant: tabletLayout_Tutorial_ver3.0
+    Children:
+    - Label_WReqFm0_LTRA_3:
+        Control: Label
+        Properties:
+          Text: ="LabREQ"&Char(174)
+          Align: =Align.Center
+          BorderStyle: =BorderStyle.None
+          BorderThickness: =5
+          Color: =RGBA(39, 113, 194, 1)
+          FocusedBorderThickness: =4
+          Font: =Font.'Lato Black'
+          FontWeight: =FontWeight.Bold
+          Height: =70
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =29.99
+          Width: =263.87
+          X: =390.56
+          Y: =181
+    - form_WRqFm3_CpyRght:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =1023.25
+          X: =0.00
+          Y: =725
+    - Arrow_WRqFm3_Fwd:
+        Control: Arrow
+        Properties:
+          OnSelect: "=If(\r\n    ComboBox_WRqFm3_SbOffc.Selected.Title =\"Abuja Country Office\",  Launch(\"https://app.powerbi.com/sharepointlist/groups/854a43d1-2d6d-4c8e-a78a-57a6f7aff9bf/reports/45f71d99-5837-4e54-bbd3-8d5930bb2a9c?spListId=%7B7dd78f2c-0dfc-4d50-ba4f-8ea12e380416%7D&spListUrl=https:%2F%2Fiomint.sharepoint.com%2Fteams%2FIOMAbujaMainoffice%2FMHAC%2FLists%2FNGAbj_AddLabTest_BackendDb&spListUniqueId=6c8138ae-6cab-4efb-b432-5e86650fd0fe7dd78f2c-0dfc-4d50-ba4f-8ea12e380416&culture=en-US\"),\r\n    ComboBox_WRqFm3_SbOffc.Selected.Title =\"Lagos Sub Office\",      Launch(\"https://app.powerbi.com/view?r=eyJrIjoiZDExMjU2MWMtNGVjMy00ZGM4LTgxYmYtZTIwMTU4YzdiMmRlIiwidCI6IjE1ODgyNjJkLTIzZmItNDNiNC1iZDZlLWJjZTQ5YzhlNjE4NiIsImMiOjh9\"),\r\n    ComboBox_WRqFm3_SbOffc.Selected.Title =\"Benin Sub Office\",      Navigate(LabBenin_ReqForm1, ScreenTransition.CoverRight),\r\n    Notify(\"Please select location\", NotificationType.Information, 3000)\r\n) "
+          AccessibleLabel: ="arrwRqFm2Fwd"
+          Height: =41
+          TabIndex: =0
+          Width: =42
+          X: =622
+          Y: =363
+    - ComboBox_WRqFm3_SbOffc:
+        Control: Classic/ComboBox
+        Properties:
+          AccessibleLabel: ="CmboBoxRqFm2_SbOffc"
+          DisplayFields: =["Title"]
+          InputTextPlaceholder: ="Select Office"
+          Items: =NG_SubOfficeDrpDown.Title
+          Reset: =true
+          SearchFields: =["Title"]
+          SelectMultiple: =false
+          BorderColor: =RGBA(15, 108, 189, 1)
+          BorderThickness: =3
+          ChevronBackground: =RGBA(255, 255, 255, 1)
+          ChevronFill: =RGBA(39, 113, 194, 1)
+          Height: =41
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.75
+          Width: =191.91
+          X: =431
+          Y: =363
+    - Label_WRqFm3_MHAC:
+        Control: Label
+        Properties:
+          Text: ="Migration Health Assessment Centre (MHAC). Nigeria."
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(39, 113, 194, 1)
+          Font: =Font.'Lato Black'
+          FontWeight: =FontWeight.Bold
+          Height: =51
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =10.94
+          Width: =429.54
+          X: =293.86
+          Y: =140
+    - image_WRqFm3_IOMlogo:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =85
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =165.67
+          X: =436.29
+          Y: =55
+    - Arrow_WRqFm3_Bck:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: =Navigate(Welcome_ReqForm1_NwSR, ScreenTransition.Fade)
+          AccessibleLabel: ="arrBackRqFm2Suboffice"
+          Height: =37.48
+          TabIndex: =0
+          Width: =37.48
+          X: =29.99
+          Y: =40
+    - Image_WRqFm3_BckPic:
+        Control: Image
+        Properties:
+          Image: =Background
+          BorderStyle: =BorderStyle.Dotted
+          Height: =768
+          ImagePosition: =ImagePosition.Tile
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =1023.25
+          X: =0.00

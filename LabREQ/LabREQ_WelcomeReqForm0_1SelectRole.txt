@@ -1,0 +1,164 @@
+- WelcomeReqForm0_1SelectRole:
+    Control: Screen
+    Variant: tabletLayout_Tutorial_ver3.0
+    Children:
+    - ComboBox1SelfRoleDutyStn:
+        Control: Classic/ComboBox
+        Properties:
+          DisplayFields: =["Value"]
+          InputTextPlaceholder: ="Duty Station"
+          Items: =["Abuja","Lagos","Benin-City"]
+          Reset: =true
+          SearchFields: =["Value"]
+          SelectMultiple: =false
+          Width: =242
+          X: =401
+          Y: =346
+    - Label5:
+        Control: Label
+        Properties:
+          Text: |-
+            ="Welcome " &Text(User().FullName)&" 
+            as a first time user, please, select your duty station and team to proceed."
+          Align: =Align.Center
+          Color: =RGBA(9, 33, 98, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =72
+          Width: =479
+          X: =272
+          Y: =261
+    - Arrow_WRqFm1_Bck_1:
+        Control: Arrow
+        Variant: backArrow
+        Properties:
+          OnSelect: =Navigate(WelcomeReqForm0, ScreenTransition.Fade)
+          Height: =37.48
+          Width: =37.48
+          X: =29
+          Y: =40
+    - Arrow3:
+        Control: Arrow
+        Properties:
+          OnSelect: "=If(\r\n    ComboBox1SelfRoleSelect.Selected.Value in [\"Doctor\",\"Finance\",\"Lab\"],\r\n        Patch(NG_UserRole_LabREQ, UserRole,\r\n        {   \r\n            UserRole : ComboBox1SelfRoleSelect.Selected.Value,\r\n            DutyStation: ComboBox1SelfRoleDutyStn.Selected.Value\r\n        }\r\n        );\r\n        Navigate(Welcome_ReqForm1_NwSR, ScreenTransition.Fade),\r\n    \r\n        Patch(NG_UserRole_LabREQ, UserRole,\r\n        {\r\n           DutyStation: ComboBox1SelfRoleDutyStn.Selected.Value\r\n        }\r\n    );\r\n    Navigate(Welcome_ReqForm1_NwSR, ScreenTransition.Fade)\r\n)"
+          Height: =40
+          Visible: =If(ComboBox1SelfRoleSelect.Visible = true,true,false)
+          Width: =39
+          X: =650
+          Y: =412
+    - ComboBox1SelfRoleSelect:
+        Control: Classic/ComboBox
+        Properties:
+          DisplayFields: =["Value"]
+          InputTextPlaceholder: ="Select your Team"
+          Items: =["Doctor","Finance","Lab","Öthers"]
+          Reset: =true
+          SearchFields: =["Value"]
+          SelectMultiple: =false
+          Visible: |-
+            =If(
+                ComboBox1SelfRoleDutyStn.Selected.Value = "Abuja",
+                true,
+                ComboBox1SelfRoleDutyStn.Selected.Value = "Lagos",
+                true,
+                ComboBox1SelfRoleDutyStn.Selected.Value = "Benin-City",
+                true,
+                false
+            )
+          Width: =242
+          X: =401
+          Y: =412
+    - form_WReqFm0_CpyRght_1:
+        Control: Label
+        Properties:
+          Text: ="Nigeria CO v1.0 "&Char(169)& Text(Year(Today()))
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(56, 96, 178, 1)
+          FontWeight: =FontWeight.Bold
+          Height: =43
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =8.25
+          Width: =1023.25
+          X: =0.00
+          Y: =725
+    - Label_WReqFm0_LTRA_8:
+        Control: Label
+        Properties:
+          Text: ="LabREQ is a proprietary solution of MHAC Nigeria, used by Panel Physicians to Request for client testing, by the Finance unit to Endorse the actual payment and the Lab team to Queue the specimen collection with auto-routing visibility and email notification throughout the entire process cycle. "
+          BorderStyle: =BorderStyle.None
+          BorderThickness: =5
+          Color: =RGBA(39, 113, 194, 1)
+          Fill: =RGBA(255, 255, 255, 1)
+          FocusedBorderThickness: =4
+          Font: =Font.'Lato Black'
+          FontWeight: =FontWeight.Lighter
+          Height: =71
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =9.00
+          Width: =425.79
+          X: =11.24
+          Y: =635
+    - Label_WReqFm0_LTRA_7:
+        Control: Label
+        Properties:
+          Text: ="LabREQ"&Char(174)
+          Align: =Align.Center
+          BorderStyle: =BorderStyle.None
+          BorderThickness: =5
+          Color: =RGBA(39, 113, 194, 1)
+          FocusedBorderThickness: =4
+          Font: =Font.'Lato Black'
+          FontWeight: =FontWeight.Bold
+          Height: =70
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =29.99
+          Width: =263.87
+          X: =380.06
+          Y: =191
+    - Label_WRqFm3_MHAC_5:
+        Control: Label
+        Properties:
+          Text: ="Migration Health Assessment Centre (MHAC). Nigeria."
+          Align: =Align.Center
+          Color: =RGBA(255, 255, 255, 1)
+          Fill: =RGBA(39, 113, 194, 1)
+          Font: =Font.'Lato Black'
+          FontWeight: =FontWeight.Bold
+          Height: =51
+          PaddingRight: =3.75
+          PaddingTop: =3.75
+          Size: =10.94
+          Width: =429.54
+          X: =293.86
+          Y: =140
+    - Label3_1:
+        Control: Label
+        Properties:
+          Text: =
+          Height: =37
+          Width: =200
+          X: =772
+          Y: =55
+    - image_WRqFm3_IOMlogo_5:
+        Control: Image
+        Properties:
+          Image: =iomlogo
+          Height: =85
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =165.67
+          X: =436.29
+          Y: =55
+    - Image_WReqFm0_BckPic_1:
+        Control: Image
+        Properties:
+          Image: =Background
+          BorderStyle: =BorderStyle.Dotted
+          Height: =768
+          ImagePosition: =ImagePosition.Tile
+          PaddingRight: =0.00
+          PaddingTop: =0.00
+          Width: =1023.25
+          X: =0.00
