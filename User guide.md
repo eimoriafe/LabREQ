@@ -18,6 +18,8 @@ This guide explains how to access, use, and troubleshoot the LabReq system.
 - **Specimen Collection Team:** Perform collection upon authorization.  
 - **Program Managers:** Monitor activity and performance metrics.  
 
+<img width="1057" height="525" alt="labreq" src="https://github.com/user-attachments/assets/2647067a-de83-4af1-8dd9-719a9db7454d" />
+
 ---
 
 ## 2. Access and Login  
