@@ -29,7 +29,7 @@
 - **Web Tier:** Azure Web Services (App Service, Logic Apps)  
 - **Security:** Azure AD Single Sign-On (SSO) with Role-Based Access Control (RBAC)  
 
-```mermaid
+
 graph LR
     Doctor -->|Submit Request| PowerApp
     PowerApp -->|Write Data| SharePoint
@@ -39,3 +39,20 @@ graph LR
     PowerAutomate -->|Authorize| SpecimenTeam
     SpecimenTeam -->|Complete Task| SharePoint
     SharePoint -->|Sync Reports| ProgramManager
+
+<img width="853" height="637" alt="image" src="https://github.com/user-attachments/assets/aa8390ba-7cb4-460e-bc96-6fa9bcae087d" />
+
+<img width="804" height="395" alt="image" src="https://github.com/user-attachments/assets/d48b4c82-daad-418e-ae8c-ae1386deb266" />
+
+<img width="837" height="677" alt="image" src="https://github.com/user-attachments/assets/704ef856-2b99-4c37-8ea5-0b59f13539ff" />
+
+<img width="911" height="548" alt="image" src="https://github.com/user-attachments/assets/e7ff2843-f15e-46ec-aaed-a5d0b096647e" />
+
+
+
+
+
+
+
+
+
